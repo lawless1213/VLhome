@@ -1,0 +1,36 @@
+// Progress bar
+
+@mixin progressBar($bg: transparent, $bar: green, $height: 8px, $br: 8px, $bbr: false) {
+  --progress-border-radius: #{$br};
+  --progress-bar-border-radius: #{$br};
+  --progress-background: #{$bg};
+  --progress-background-bar: #{$bar};
+  height: #{$height};
+  border: none;
+
+  @if $bbr != false {
+    --progress-bar-border-radius: #{$bbr};
+  }
+
+  &[value]::-webkit-progress-bar {
+    background: var(--progress-background);
+    border-radius: var(--progress-border-radius);
+    overflow: hidden;
+  }
+
+  &[value]::-moz-progress-bar {
+    background: var(--progress-background);
+    border-radius: var(--progress-border-radius);
+    overflow: hidden;
+  }
+
+  &[value]::-webkit-progress-value {
+    background: var(--progress-background-bar);
+    border-radius: var(--progress-bar-border-radius);
+  }
+
+  &[value]::-moz-progress-value {
+    background: var(--progress-background-bar);
+    border-radius: var(--progress-bar-border-radius);
+  }
+}

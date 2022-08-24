@@ -1,0 +1,21 @@
+// Text
+@mixin text_overflow($lines: 1) {
+  @if $lines == 0 {
+    white-space: nowrap;
+  }
+
+  @if $lines != 0 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+  }
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin text_gradient($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

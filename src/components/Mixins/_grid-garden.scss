@@ -1,0 +1,37 @@
+// Grid
+@mixin grid-garden($col: 3, $gap: 8px, $just: center, $sideGap: false, $lastCenter: true) {
+  // Items container
+  // Must be w100%
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: $just;
+
+  @if $sideGap==false {
+    margin-right: calc(#{$gap} / -2);
+    margin-left: calc(#{$gap} / -2);
+  }
+
+  @else if $sideGap {
+    margin-right: $sideGap;
+    margin-left: $sideGap;
+  }
+
+  // Item (content wrap)
+  > * {
+    width: calc(100% / #{$col});
+    margin: 0;
+    padding: calc(#{$gap} / 2);
+
+    @if ($lastCenter == true) {
+      &:last-child:nth-child(n+#{$col}) {
+        margin-right: auto;
+      }
+    }
+
+    // Content element
+    > * {
+      width: 100%;
+      height: 100%
+    }
+  }
+}
