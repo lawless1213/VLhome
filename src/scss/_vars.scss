@@ -1,3 +1,11 @@
+//Colors
+$colorPrimary: #CBBBA8;
+$colorWhite: #FFFFFF;
+$colorBlack: #000000;
+
+$colorTextPrimary: #2E201A;
+$colorTextSecondary: #4E3B32;
+
 // Container
 @use 'sass:math';
 $containerWidth: 1200;
@@ -6,7 +14,7 @@ $containerSidePadding: math.div($containerPadding, 2);
 // -------------------
 
 // Burger Menu
-$burgerBreakpoint: $breakpoint992;
+$burgerBreakpoint: $tablet-portrait;
 $burgerColor: black;
 $burgerActiveColor: white;
 // -------------------
@@ -14,3 +22,5 @@ $burgerActiveColor: white;
 // Fonts
 $fontMain: sans-serif;
 // -------------------
+
+$transition: 0.2s;
