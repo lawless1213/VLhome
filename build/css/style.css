@@ -121,12 +121,20 @@ body {
   transition: 0.2s;
 }
 
-.link:after,
-.link:before {
+.link:hover {
+  color: #2E201A;
+}
+
+.link.bordered {
+  padding: 10px 20px;
+}
+
+.link.bordered:after,
+.link.bordered:before {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 6px;
+  left: 0;
   background: #2E201A;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
@@ -134,18 +142,14 @@ body {
   opacity: 0;
 }
 
-.link:before {
+.link.bordered:before {
   width: 1px;
   height: 0;
 }
 
-.link:after {
+.link.bordered:after {
   width: 0;
   height: 1px;
-}
-
-.link:hover {
-  color: #2E201A;
 }
 
 .link:hover:after,
@@ -159,6 +163,116 @@ body {
 
 .link:hover:after {
   width: 30px;
+}
+
+.aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  background: #CBBBA8;
+  border-radius: 0 0 22px 22px;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.5s;
+  transition: opacity 0.2s, -webkit-transform 0.5s;
+  -o-transition: transform 0.5s, opacity 0.2s;
+  transition: transform 0.5s, opacity 0.2s;
+  transition: transform 0.5s, opacity 0.2s, -webkit-transform 0.5s;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  z-index: 1000;
+}
+
+.aside .burger {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  display: block;
+  width: 30px;
+  height: 20px;
+  color: #4E3B32;
+  z-index: 102;
+  cursor: pointer;
+}
+
+.aside .burger:before,
+.aside .burger:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.aside .burger:before {
+  top: 8px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.aside .burger::after {
+  bottom: 10px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.aside .burger span {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.aside .burger:hover {
+  color: #2E201A;
+}
+
+.aside .content {
+  display: grid;
+  padding: 40px 20px;
+  text-align: center;
+  gap: 40px;
+}
+
+.aside .content .logo {
+  justify-self: center;
+}
+
+.aside .content .logo a {
+  display: block;
+}
+
+.aside .content .aside_menu {
+  justify-self: center;
+}
+
+.aside .content .aside_menu .link {
+  font-size: 20px;
+}
+
+.aside_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 999;
 }
 
 header {
@@ -194,6 +308,11 @@ header .navbar .menu__item-link {
   font-size: 20px;
 }
 
+header .navbar .menu__item-link:after,
+header .navbar .menu__item-link:before {
+  left: 6px;
+}
+
 header .navbar .burger {
   display: none;
   cursor: pointer;
@@ -204,117 +323,58 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-  .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
+  .aside.open {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  .aside_open .aside_overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header .navbar .menu {
     display: none;
-    width: 100vw;
-    height: 100vh;
-    background: #131418;
   }
 
-  .menu.active {
-    top: 0;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100vw;
-    height: 100vh;
-    -webkit-animation: fade 0.1s linear;
-            animation: fade 0.1s linear;
-    pointer-events: all;
-    z-index: 22;
-  }
-
-  .burger {
+  header .navbar .burger {
     position: relative;
     display: block;
     width: 30px;
     height: 20px;
     z-index: 102;
+    color: #4E3B32;
     cursor: pointer;
   }
 
-  .burger.active-burger:before {
-    top: 8px;
-    background: white;
-    -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-
-  .burger.active-burger:after {
-    bottom: 10px;
-    background: white;
-    -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-
-  .burger.active-burger span {
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0);
-  }
-
-  .burger:before,
-  .burger:after {
+  header .navbar .burger:before,
+  header .navbar .burger:after {
     content: "";
     position: absolute;
     width: 100%;
     height: 2px;
-    background: black;
-    -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    background: currentColor;
   }
 
-  .burger:before {
+  header .navbar .burger:before {
     top: 0;
   }
 
-  .burger::after {
+  header .navbar .burger::after {
     bottom: 0;
   }
 
-  .burger span {
+  header .navbar .burger span {
     position: absolute;
     top: 9px;
     right: 0;
     width: 100%;
     height: 2px;
-    background: black;
-    -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
+    background: currentColor;
   }
 
-  .menu__item {
-    margin-top: 15px;
-  }
-
-  .menu__item-link {
-    color: white;
+  header .navbar .burger:hover {
+    color: #2E201A;
   }
 }

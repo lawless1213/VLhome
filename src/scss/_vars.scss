@@ -13,14 +13,16 @@ $containerPadding: 40;
 $containerSidePadding: math.div($containerPadding, 2);
 // -------------------
 
-// Burger Menu
-$burgerBreakpoint: $tablet-portrait;
-$burgerColor: black;
-$burgerActiveColor: white;
+// Aside
+$burgerColor: $colorTextSecondary;
+$burgerActiveColor: $colorTextPrimary;
+$asideOverlayColor: rgba($colorBlack, .8);
 // -------------------
 
 // Fonts
-$fontMain: sans-serif;
+$fontMain: "Roboto", sans-serif;
 // -------------------
 
+// Fonts
 $transition: 0.2s;
+// -------------------
