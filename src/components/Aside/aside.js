@@ -4,7 +4,6 @@ const ASIDE_OVERLAY_HTML = '<div class="aside_overlay close_aside"></div>';
 const $document = $(document);
 
 function init() {
-	console.log('aside init');
 	let $overlay = $('.aside_overlay');
 	if (!$overlay.length) {
 			$overlay = $(ASIDE_OVERLAY_HTML);
@@ -31,8 +30,6 @@ function open($aside) {
     $aside.addClass('open')
         .trigger('aside:open');
 }
-
-
 
 function toggleAside() {
     let $button = $(this);

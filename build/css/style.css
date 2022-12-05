@@ -112,6 +112,13 @@ body {
   }
 }
 
+.button {
+  min-height: 60px;
+  min-width: 300px;
+  padding: 20px 26px;
+  border-radius: 22px;
+}
+
 .link {
   position: relative;
   display: block;

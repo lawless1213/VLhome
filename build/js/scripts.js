@@ -72,4 +72,3 @@ if (window.jQuery) {
 } else {
 	console.log('jQuery не подключен к странице');
 }
-
