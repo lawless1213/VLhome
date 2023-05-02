@@ -70,8 +70,8 @@ h6 {
 }
 
 .container {
-  max-width: 1240px;
   width: 100%;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -96,17 +96,43 @@ body {
   color: #FFFFFF;
 }
 
-.section_title {
-  font-size: 48px;
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #1D2228;
+  border-radius: 2px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #1D2228;
+  border-radius: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #FF4C00;
+  border-radius: 2px;
+}
+
+section.dark {
+  padding: 100px 0;
+  background-color: #1D2228;
+}
+
+section.space-top {
+  margin-top: 100px;
+}
+
+section .section_title {
   line-height: 62px;
+  font-size: 48px;
   font-weight: 700;
 }
 
-.section_title .upper {
+section .section_title .upper {
   text-transform: uppercase;
 }
 
-.section_title .dark {
+section .section_title .dark {
   color: #282828;
 }
 

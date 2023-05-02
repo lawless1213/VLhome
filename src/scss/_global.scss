@@ -1,7 +1,7 @@
 // Container
 .container {
-    max-width: ($containerWidth + $containerPadding) + px;
     width: 100%;
+    max-width: ($containerWidth + $containerPadding) + px;
     margin: 0 auto;
     padding: 0 $containerSidePadding + px;
 
@@ -26,22 +26,34 @@ body {
 
 // Body
 body {
+    @include scrollbar(6px, 6px, $colorPanel, $colorPanel, $colorPrimary, 2px, 2px, 2px);
     font-family: 'Montserrat', sans-serif;
     color: $colorTextPrimary;
 }
 
 //Section 
-.section_title {
-    font-size: 48px;
-    line-height: 62px;
-    font-weight: 700;
-
-    .upper {
-        text-transform: uppercase;
+section {
+    &.dark {
+        padding: 100px 0;
+        background-color: $colorPanel;
     }
 
-    .dark {
-        color: $colorTextSecondary;
+    &.space-top {
+        margin-top: 100px;
+    }
+
+    .section_title {
+        line-height: 62px;
+        font-size: 48px;
+        font-weight: 700;
+    
+        .upper {
+            text-transform: uppercase;
+        }
+    
+        .dark {
+            color: $colorTextSecondary;
+        }
     }
 }
 
