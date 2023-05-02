@@ -1,5 +1,6 @@
 // Global SCSS-files imports
 @import './mixin';
+@import './fonts';
 @import './vars';
 @import './reset';
 @import './global';
@@ -9,6 +10,7 @@
 @import './aside';
 @import './header';
 @import './footer';
+@import './sections/_main';
 
 // Libs
 // @import './libs/swiper';

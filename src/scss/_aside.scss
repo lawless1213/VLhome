@@ -5,8 +5,8 @@ $transitionAside: 0.5s;
 	position: fixed;
 	top: 0;
 	right: 0;
-	width: 100vw;
-	background: $colorPrimary;
+	left: 0;
+	background: $colorPanel;
 	border-radius: 0 0 22px 22px;
 	transition: transform $transitionAside, opacity $transition;
 	transform: translateY(-100%);
@@ -65,10 +65,12 @@ $transitionAside: 0.5s;
 		gap: 40px;
 
 		.logo {
+			display: block;
 			justify-self: center;
 
-			a {
+			img {
 				display: block;
+				height: 100%;
 			}
 		}
 
@@ -90,11 +92,12 @@ $transitionAside: 0.5s;
 		visibility: hidden;
 		background: $asideOverlayColor;
 		transition: $transitionAside;
+		backdrop-filter: blur(6px);
 		opacity: 0;
 		z-index: calc($asideZIndex - 1);
 	}
 
-	@include mediaScreen(0, $tablet-portrait) {
+	@include mediaScreen(0, $tablet-landscape) {
 		&.open {
 			transform: translateX(0);
 		}
@@ -102,7 +105,7 @@ $transitionAside: 0.5s;
 }
 
 
-@include mediaScreen(0, $tablet-portrait) {
+@include mediaScreen(0, $tablet-landscape) {
 	.aside_open {
 		.aside_overlay {
 			visibility: visible;

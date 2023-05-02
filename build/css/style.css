@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;
+
+400;600;700&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -89,7 +92,22 @@ body.locked {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: #FFFFFF;
+}
+
+.section_title {
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: 700;
+}
+
+.section_title .upper {
+  text-transform: uppercase;
+}
+
+.section_title .dark {
+  color: #282828;
 }
 
 @-webkit-keyframes fade {
@@ -113,62 +131,67 @@ body {
 }
 
 .button {
-  min-height: 60px;
-  min-width: 300px;
-  padding: 20px 26px;
-  border-radius: 22px;
+  padding: 16px 30px;
+  background-color: #FF4C00;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
 }
 
-.link {
+.button:hover {
+  background-color: #FB7405;
+}
+
+.nav-link {
   position: relative;
   display: block;
-  color: #4E3B32;
+  padding: 10px 20px;
+  color: #FFFFFF;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
 }
 
-.link:hover {
-  color: #2E201A;
-}
-
-.link.bordered {
-  padding: 10px 20px;
-}
-
-.link.bordered:after,
-.link.bordered:before {
+.nav-link:after,
+.nav-link:before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #2E201A;
+  background: #FFFFFF;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
   opacity: 0;
 }
 
-.link.bordered:before {
+.nav-link:before {
   width: 1px;
   height: 0;
 }
 
-.link.bordered:after {
+.nav-link:after {
   width: 0;
   height: 1px;
 }
 
-.link:hover:after,
-.link:hover:before {
+.nav-link:hover {
+  color: #FF4C00;
+}
+
+.nav-link:hover:after,
+.nav-link:hover:before {
   opacity: 1;
 }
 
-.link:hover:before {
+.nav-link:hover:before {
   height: 20px;
 }
 
-.link:hover:after {
+.nav-link:hover:after {
   width: 30px;
 }
 
@@ -176,8 +199,8 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100vw;
-  background: #CBBBA8;
+  left: 0;
+  background: #1D2228;
   border-radius: 0 0 22px 22px;
   -webkit-transition: opacity 0.2s, -webkit-transform 0.5s;
   transition: opacity 0.2s, -webkit-transform 0.5s;
@@ -197,7 +220,7 @@ body {
   display: block;
   width: 30px;
   height: 20px;
-  color: #4E3B32;
+  color: #FFFFFF;
   z-index: 102;
   cursor: pointer;
 }
@@ -241,7 +264,7 @@ body {
 }
 
 .aside .burger:hover {
-  color: #2E201A;
+  color: #FF4C00;
 }
 
 .aside .content {
@@ -252,11 +275,13 @@ body {
 }
 
 .aside .content .logo {
+  display: block;
   justify-self: center;
 }
 
-.aside .content .logo a {
+.aside .content .logo img {
   display: block;
+  height: 100%;
 }
 
 .aside .content .aside_menu {
@@ -278,12 +303,19 @@ body {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
   opacity: 0;
   z-index: 999;
 }
 
 header {
-  background: #CBBBA8;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
 }
 
 header .navbar {
@@ -300,8 +332,15 @@ header .navbar {
   height: 80px;
 }
 
-header .navbar .logo a {
+header .navbar .logo {
   display: block;
+  height: 100%;
+  justify-self: center;
+}
+
+header .navbar .logo img {
+  display: block;
+  height: 100%;
 }
 
 header .navbar .menu {
@@ -329,7 +368,38 @@ footer {
   display: block;
 }
 
-@media (max-width: 767.8px) {
+section.main {
+  padding: 230px 0 150px;
+  background: url("/img/main-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+section.main .section_content {
+  max-width: 900px;
+}
+
+section.main .section_content h4 {
+  margin-top: 20px;
+  line-height: 46px;
+  font-size: 36px;
+}
+
+section.main .section_content .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+section.main .section_content .actions .button:not(:last-child) {
+  margin-right: 100px;
+}
+
+@media (max-width: 1023.8px) {
   .aside.open {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
@@ -350,8 +420,11 @@ footer {
     display: block;
     width: 30px;
     height: 20px;
+    color: #FFFFFF;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
     z-index: 102;
-    color: #4E3B32;
     cursor: pointer;
   }
 
@@ -382,6 +455,6 @@ footer {
   }
 
   header .navbar .burger:hover {
-    color: #2E201A;
+    color: #FF4C00;
   }
 }

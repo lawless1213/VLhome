@@ -1,29 +1,33 @@
 // Header
 
 header {
-	background: $colorPrimary;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	backdrop-filter: blur(6px);
 
 	.navbar {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		height: 80px;
+		height: $headerHeight;
 
 		.logo {
-			a {
+			display: block;
+			height: 100%;
+			justify-self: center;
+
+			img {
 				display: block;
+				height: 100%;
 			}
 		}
 
 		.menu {
 			display: flex;
-		
-			// .menu__item
-			&__item {
-					
-			}
-		
+	
 			// .menu__item-link
 			&__item-link {
 				padding: 10px 20px;
@@ -42,7 +46,7 @@ header {
 		}
 	}
 
-	@include mediaScreen(0, $tablet-portrait) {
+	@include mediaScreen(0, $tablet-landscape) {
 		.navbar {
 			.menu {
 				display: none;
@@ -54,9 +58,11 @@ header {
 				display: block;
 				width: 30px;
 				height: 20px;
-				z-index: 102;
 				color: $burgerColor;
+				transition: $transition;
+				z-index: 102;
 				cursor: pointer;
+
 
 				&:before,
 				&:after {

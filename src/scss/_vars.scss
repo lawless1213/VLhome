@@ -7,12 +7,14 @@ $desktop-wide: 1921;
 // -------------------
 
 //Colors
-$colorPrimary: #CBBBA8;
+$colorPrimary: #FF4C00;
+$colorSecondary: #FB7405;
+$colorPanel: #1D2228;
 $colorWhite: #FFFFFF;
 $colorBlack: #000000;
 
-$colorTextPrimary: #2E201A;
-$colorTextSecondary: #4E3B32;
+$colorTextPrimary: $colorWhite;
+$colorTextSecondary: #282828;
 
 // Container
 @use 'sass:math';
@@ -21,9 +23,13 @@ $containerPadding: 40;
 $containerSidePadding: math.div($containerPadding, 2);
 // -------------------
 
+// Header
+$headerHeight: 80px;
+// -------------------
+
 // Aside
-$burgerColor: $colorTextSecondary;
-$burgerActiveColor: $colorTextPrimary;
+$burgerColor: $colorTextPrimary;
+$burgerActiveColor: $colorPrimary;
 $asideOverlayColor: rgba($colorBlack, .8);
 // -------------------
 

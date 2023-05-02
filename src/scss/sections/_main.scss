@@ -1,0 +1,27 @@
+section.main {
+	padding: calc(150px + $headerHeight) 0 150px;
+	background: url('/img/main-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: cover;
+
+	.section_content {
+		max-width: 900px;
+		
+		h4 {
+			margin-top: 20px;
+			line-height: 46px;
+			font-size: 36px;
+		}
+
+		.actions {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 60px;
+
+			.button:not(:last-child) {
+				margin-right: 100px;
+			}
+		}
+	}
+}

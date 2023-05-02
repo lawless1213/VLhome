@@ -26,7 +26,23 @@ body {
 
 // Body
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: $colorTextPrimary;
+}
+
+//Section 
+.section_title {
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 700;
+
+    .upper {
+        text-transform: uppercase;
+    }
+
+    .dark {
+        color: $colorTextSecondary;
+    }
 }
 
 // Animations
