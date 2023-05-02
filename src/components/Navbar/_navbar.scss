@@ -40,7 +40,7 @@ nav {
 }
 
 // Burger menu styles
-@include _media($burgerBreakpoint) {
+@include mediaScreen(0, $burgerBreakpoint) {
     // .menu
     .menu {
         position: fixed;

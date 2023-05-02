@@ -4,7 +4,7 @@
     &__header {
         display: flex;
         justify-content: center;
-        @include _media($tablet-portrait) {
+        @include mediaScreen(0, $tablet-portrait) {
             flex-wrap: wrap;
         }
         &-item {

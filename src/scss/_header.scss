@@ -42,7 +42,7 @@ header {
 		}
 	}
 
-	@include _media($tablet-portrait) {
+	@include mediaScreen(0, $tablet-portrait) {
 		.navbar {
 			.menu {
 				display: none;

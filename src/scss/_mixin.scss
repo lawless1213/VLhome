@@ -1,18 +1,16 @@
-// Breakpoints
-$phone: '(max-width: 576px)';
-$tablet-portrait: '(max-width: 768px)';
-$tablet-landscape: '(max-width: 1024px)';
-$desktop: '(max-width: 1200px)';
-$desktop-wide: '(min-width: 1921px)';
-
-$not_phone: '(min-width: 577px)';
-$not_tablet: '(min-width: 769px)';
-$not_tablet-landscape: '(min-width: 1025px)';
-$not_desktop: '(min-width: 1201px)';
-
 // Media
-@mixin _media($media...) {
-  @media only screen and #{$media} {
+@mixin mediaScreen($min: 0, $max: false) {
+  $media: '(min-width: #{$min}px)';
+
+  @if $min and $max {
+    $media: '(min-width: #{$min}px) and (max-width: #{$max - 0.2}px)';
+  }
+
+  @if $min==0 and $max {
+    $media: '(max-width: #{$max - 0.2}px)';
+  }
+
+  @media #{$media} {
     @content;
   }
 }

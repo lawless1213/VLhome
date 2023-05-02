@@ -94,7 +94,7 @@ $transitionAside: 0.5s;
 		z-index: calc($asideZIndex - 1);
 	}
 
-	@include _media($tablet-portrait) {
+	@include mediaScreen(0, $tablet-portrait) {
 		&.open {
 			transform: translateX(0);
 		}
@@ -102,7 +102,7 @@ $transitionAside: 0.5s;
 }
 
 
-@include _media($tablet-portrait) {
+@include mediaScreen(0, $tablet-portrait) {
 	.aside_open {
 		.aside_overlay {
 			visibility: visible;
