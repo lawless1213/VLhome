@@ -9,7 +9,20 @@ section.calculator {
 		}
 
 		.form_calculator {
-			
+			width: 100%;
+			max-width: 100%;
+			background: $colorWhite;
+			color: $colorTextSecondary;
+
+			.form_title {
+
+			}
+
+			.question_block {
+				.question_title {
+					color: $colorTextTertiary;
+				}
+			}
 		}
 	}
 }

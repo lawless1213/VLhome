@@ -560,6 +560,17 @@ section.main .section_content .actions .button:not(:last-child) {
   margin-right: 100px;
 }
 
+section.calculator .section_content .form_calculator {
+  width: 100%;
+  max-width: 100%;
+  background: #FFFFFF;
+  color: #282828;
+}
+
+section.calculator .section_content .form_calculator .question_block .question_title {
+  color: #999999;
+}
+
 @media (max-width: 1023.8px) {
   .aside.open {
     -webkit-transform: translateX(0);
