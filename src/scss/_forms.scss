@@ -1,0 +1,135 @@
+form {
+	input.input {
+		padding: 16px 20px;
+		background: none;
+		border: 1px solid $colorPrimary;
+		outline: none;
+		transition: $transition;
+
+		&.small {
+			width: 100px;
+		}
+
+		& + .caption {
+
+		}
+	}
+	
+	input[type='radio'] {
+		display: none;
+
+		& + label {
+			display: inline-block;
+			padding: 16px 20px;
+			border: 1px solid $colorPrimary;
+			transition: $transition;
+			cursor: pointer;
+
+			&:hover {
+				background: $colorPrimary;
+			}
+		}
+
+		&:checked + label {
+			background: $colorPrimary;
+		}
+	}
+
+	input[type=range] {
+		width: 100%;
+		margin: 18px 0;
+		-webkit-appearance: none;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::-webkit-slider-runnable-track {
+			width: 100%;
+			height: 1px;
+			background: #797979;
+			border: none;
+			box-shadow: none;
+			cursor: pointer;
+			;
+		}
+
+		&::-webkit-slider-thumb {
+			width: 20px;
+			height: 20px;
+			margin-top: -10px;
+			background: $colorPrimary;
+			border: none;
+			border-radius: 50%;
+			box-shadow: none;
+			cursor: pointer;
+			-webkit-appearance: none;
+		}
+
+		&:focus::-webkit-slider-runnable-track {
+			background: #797979;
+		}
+
+		&::-moz-range-track {
+			width: 100%;
+			height: 1px;
+			background: #797979;
+			border: none;
+			box-shadow: none;
+			cursor: pointer;
+		}
+
+		&::-moz-range-thumb {
+			width: 20px;
+			height: 20px;
+			margin-top: -10px;
+			background: $colorPrimary;
+			border: none;
+			border-radius: 50%;
+			box-shadow: none;
+			cursor: pointer;
+			-webkit-appearance: none;
+		}
+
+		&::-ms-track {
+			width: 100%;
+			height: 1px;
+			background: #797979;
+			border: none;
+			box-shadow: none;
+			cursor: pointer;
+		}
+
+		&::-ms-fill-lower {
+			background: $colorPrimary;
+			border: none;
+			box-shadow: none;
+		}
+
+		&::-ms-fill-upper {
+			background: $colorPrimary;
+			border: none;
+			box-shadow: none;
+		}
+
+		&::-ms-thumb {
+			width: 20px;
+			height: 20px;
+			margin-top: -10px;
+			background: $colorPrimary;
+			border: none;
+			border-radius: 50%;
+			box-shadow: none;
+			cursor: pointer;
+			-webkit-appearance: none;
+		}
+
+		&:focus::-ms-fill-lower {
+			background: $colorSecondary;
+		}
+
+		&:focus::-ms-fill-upper {
+			background: $colorSecondary;
+		}
+	}
+}

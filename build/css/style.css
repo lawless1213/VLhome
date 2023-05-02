@@ -221,6 +221,141 @@ section .section_title .dark {
   width: 30px;
 }
 
+form input.input {
+  padding: 16px 20px;
+  background: none;
+  border: 1px solid #FF4C00;
+  outline: none;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+form input.input.small {
+  width: 100px;
+}
+
+form input[type=radio] {
+  display: none;
+}
+
+form input[type=radio] + label {
+  display: inline-block;
+  padding: 16px 20px;
+  border: 1px solid #FF4C00;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+form input[type=radio] + label:hover {
+  background: #FF4C00;
+}
+
+form input[type=radio]:checked + label {
+  background: #FF4C00;
+}
+
+form input[type=range] {
+  width: 100%;
+  margin: 18px 0;
+  -webkit-appearance: none;
+}
+
+form input[type=range]:focus {
+  outline: none;
+}
+
+form input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  background: #797979;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+form input[type=range]::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background: #FF4C00;
+  border: none;
+  border-radius: 50%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+form input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #797979;
+}
+
+form input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  background: #797979;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+form input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background: #FF4C00;
+  border: none;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+form input[type=range]::-ms-track {
+  width: 100%;
+  height: 1px;
+  background: #797979;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+form input[type=range]::-ms-fill-lower {
+  background: #FF4C00;
+  border: none;
+  box-shadow: none;
+}
+
+form input[type=range]::-ms-fill-upper {
+  background: #FF4C00;
+  border: none;
+  box-shadow: none;
+}
+
+form input[type=range]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  background: #FF4C00;
+  border: none;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+form input[type=range]:focus::-ms-fill-lower {
+  background: #FB7405;
+}
+
+form input[type=range]:focus::-ms-fill-upper {
+  background: #FB7405;
+}
+
 .aside {
   position: fixed;
   top: 0;

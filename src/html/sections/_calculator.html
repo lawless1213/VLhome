@@ -9,57 +9,66 @@
 						<p>Самый важный результат в нашей работе — репутация компании и счастливые обладатели комфортного жилья.</p>
 					</div>
 				</div>
+
 				<a class="works" href="#">Посмотрите наши работы</a>
-				<div class="send_form">
-					<form class="form_calculator">
-							<div class="form_title">Прорахуйте вартість ремонту вашого житла</div>
-							<div class="prod_checbox">  
-									<div class="radio-toolbar"> 
-											<h6>Тип объекта</h6>
-											<input type="radio" id="radio1" name="radios" value="Стандатный" checked>
-											<label for="radio1">Квартира новостройка</label>
-											
-											<input type="radio" id="radio2" name="radios" value="Морозостойкий">
-											<label for="radio2">Квартира вторичка</label>
-											
-											<input type="radio" id="radio3" name="radios" value="Паростойкий">
-											<label for="radio3">Дом/коттедж</label>
-											<input type="radio" id="radio4" name="radios" value="Паростойкий">
-											<label for="radio4">Коммерция</label>
-									</div> 
+				
+				<form class="form_calculator">
+					<div class="form_title">Прорахуйте вартість ремонту вашого житла</div>
+					<div class="question_block">
+						<div class="question_title">Тип объекта</div>
+						<div class="answers_list">
+							<div class="answer">
+								<input type="radio" id="type1" name="type" value="Квартира новостройка">
+								<label for="type1">Квартира новостройка</label>
 							</div>
-							<div class="prod_checbox_2">  
-									<div class="radio-toolbar_2"> 
-											<h6>Вид ремонту</h6>
-											<input type="radio" id="radio5" name="radios1" value="Косметический" checked>
-											<label for="radio5">Косметический</label>
-											
-											<input type="radio" id="radio6" name="radios1" value="Капитальный">
-											<label for="radio6">Капитальный</label>
-											
-											<input type="radio" id="radio7" name="radios1" value="Дизайнерский">
-											<label for="radio7">Дизайнерский</label>
-									</div> 
+							<div class="answer">
+								<input type="radio" id="type2" name="type" value="Квартира вторичка">
+								<label for="type2">Квартира вторичка</label>
 							</div>
-							<div class="type_remont">
-									<h6>Площа</h6>
-									<div class="value">
-											<span id="value">0</span>
-											<span>м2</span>
-									</div>
+							<div class="answer">
+								<input type="radio" id="type3" name="type" value="Дом/коттедж">
+								<label for="type3">Дом/коттедж</label>
 							</div>
+							<div class="answer">
+								<input type="radio" id="type4" name="type" value="Коммерция">
+								<label for="type4">Коммерция</label>
+							</div>
+						</div>
+					</div>
 
+					<div class="question_block">
+						<div class="question_title">Вид ремонта</div>
+						<div class="answers_list">
+							<div class="answer">
+								<input type="radio" id="kind1" name="kind" value="Косметический">
+								<label for="kind1">Косметический</label>
+							</div>
+							<div class="answer">
+								<input type="radio" id="kind2" name="kind" value="Капитальный">
+								<label for="kind2">Капитальный</label>
+							</div>
+							<div class="answer">
+								<input type="radio" id="kind3" name="kind" value="Дизайнерский">
+								<label for="kind3">Дизайнерский</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="question_block">
+							<div class="question_title">Площа</div>
 							<input type="range" min="0" max="300" step="1" value="0">
+							<input class="input small" placeholder="0" data-square="м2" type="tel" name="square">
+							<span class="caption">м2</span>
+					</div>
 
-							<div class="form_number">
-									<h6>Ваш номер телефону</h6>
-									<input class="style_phone" type="tel" placeholder="(+380)-XX-XXX-XXXX" id="phone" name="phone">
-							</div>
-
-
-					</а>
+					<div class="question_block">
+						<div class="question_title">Ваш номер телефону</div>
+						<input class="input" type="tel" placeholder="(+380)-XX-XXX-XXXX" name="phone">
+					</div>
+			
 					<button type="submit" class="button">Розрахувати</button>
 				</form>
+
 				<div class="actions">
 					<button>У меня свой дизайн-проект</button>
 					<button>Нужна помощь специалиста</button>
