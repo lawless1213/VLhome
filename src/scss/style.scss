@@ -5,6 +5,7 @@
 @import './reset';
 @import './global';
 @import './buttons';
+@import './divider';
 @import './forms';
 
 // Sections or Pages SCSS-files imports
@@ -14,6 +15,8 @@
 @import './sections/_main';
 @import './sections/_calculator';
 @import './sections/_about';
+
+@import './_repair_card';
 
 // Libs
 // @import './libs/swiper';
