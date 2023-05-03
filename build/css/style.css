@@ -1721,6 +1721,116 @@ section.about .section_content .info .item .title {
   }
 }
 
+section.portfolio .portfolio_gallery .gallery_item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+section.portfolio .portfolio_gallery .gallery_item .image_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+section.portfolio .portfolio_gallery .gallery_item .image_wrapper::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+section.portfolio .portfolio_gallery .gallery_item .image_wrapper .image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section.portfolio .portfolio_gallery .gallery_item .image_wrapper .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.portfolio .portfolio_gallery .gallery_item .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px 50px;
+  background: #1D2228;
+}
+
+section.portfolio .portfolio_gallery .gallery_item .info > .title {
+  font-size: 22px;
+}
+
+section.portfolio .portfolio_gallery .gallery_item .info .description {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 20px 0;
+  gap: 8px;
+}
+
+section.portfolio .portfolio_gallery .gallery_item .info .description span {
+  font-weight: 700;
+}
+
+section.portfolio .portfolio_gallery .swiper-button-prev,
+section.portfolio .portfolio_gallery .swiper-button-next {
+  width: 50px;
+  height: 50px;
+  background: #FF4C00;
+}
+
+section.portfolio .portfolio_gallery .swiper-button-prev::after,
+section.portfolio .portfolio_gallery .swiper-button-next::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+}
+
+section.portfolio .portfolio_gallery .swiper-button-prev::after {
+  border-top-width: 14px;
+  border-right: 12px solid #FFFFFF;
+  border-bottom-width: 14px;
+}
+
+section.portfolio .portfolio_gallery .swiper-button-next::after {
+  border-top-width: 14px;
+  border-bottom-width: 14px;
+  border-left: 12px solid #FFFFFF;
+}
+
+section.portfolio .portfolio_gallery .swiper-pagination {
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+  gap: 6px;
+}
+
+section.portfolio .portfolio_gallery .swiper-pagination .dot {
+  display: block;
+  width: 50px;
+  height: 10px;
+  border: 2px solid #FF4C00;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+section.portfolio .portfolio_gallery .swiper-pagination .dot-active {
+  background: #FF4C00;
+}
+
 .repair_card {
   width: 370px;
   height: auto;
@@ -1828,5 +1938,10 @@ section.about .section_content .info .item .title {
   section.calculator .section_content .actions {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+
+  section.portfolio .portfolio_gallery .gallery_item .info {
+    position: static;
+    margin-top: 20px;
   }
 }

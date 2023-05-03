@@ -81,9 +81,30 @@ $document.on('click', '.close_aside', close);
 var scroll = new SmoothScroll('a[href*="#"]');
 
 // Инициализация слайдеров
-const swiper = new Swiper('.swiper', {
+const swiperRepair = new Swiper('#repair-list', {
 	slidesPerView: "auto",
 	spaceBetween: 30
+});
+
+const swiperPortfolio = new Swiper('#portfolio-gallery', {
+	slidesPerView: "auto",
+	spaceBetween: 30,
+	parallax: true,
+	autoplay: {
+		delay: 5000,
+	},
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+		bulletClass: 'dot',
+		bulletActiveClass: 'dot-active',
+	},
+
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
 });
 
 
