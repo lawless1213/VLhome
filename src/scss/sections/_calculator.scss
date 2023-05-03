@@ -8,13 +8,7 @@ section.calculator {
 			max-width: 600px;
 			padding-right: 50px;
 
-			.description {
-				@include paragraph();
-				position: relative;
-				margin-top: 50px;
-				line-height: 30px;
-				font-size: 24px;
-			}
+			
 		}
 
 		.works {

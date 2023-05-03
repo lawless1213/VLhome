@@ -59,6 +59,13 @@ section {
             color: $colorTextSecondary;
         }
     }
+
+    .section_description {
+        @include paragraph();
+        margin-top: 50px;
+        line-height: 30px;
+        font-size: 24px;
+    }
 }
 
 // Animations

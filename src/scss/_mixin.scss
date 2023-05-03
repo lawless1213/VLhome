@@ -36,8 +36,9 @@
 }
 
 @mixin paragraph() {
+  position: relative;
   padding-left: 50px;
-  
+
   &:after {
     content: '';
     position: absolute;
