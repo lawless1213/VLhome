@@ -1,3 +1,6 @@
+// Libs
+@import './libs/swiper';
+
 // Global SCSS-files imports
 @import './mixin';
 @import './fonts';
@@ -17,6 +20,3 @@
 @import './sections/_about';
 
 @import './_repair_card';
-
-// Libs
-@import './libs/swiper';

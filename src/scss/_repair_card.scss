@@ -1,5 +1,35 @@
 .repair_card {
-	width: 370px !important;
+	width: 370px;
+	height: auto;
 	padding: 50px;
 	background: $colorPanel;
+
+	> .title {
+		margin-bottom: 20px;
+		line-height: 30px;
+		font-size: 26px;
+		font-weight: 700;
+	}
+
+	.price {
+		font-size: 20px;
+	}
+
+	.description {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 10px;
+
+		.description_title {
+			font-size: 18px;
+		}
+
+		span {
+			font-size: 14px;
+		}
+	}
+
+	.button {
+		margin-top: 30px;
+	}
 }

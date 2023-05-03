@@ -43,6 +43,7 @@ section {
     }
 
     .section_title {
+        margin-bottom: 50px;
         line-height: 52px;
         font-size: 38px;
         font-weight: 700;
@@ -62,7 +63,6 @@ section {
 
     .section_description {
         @include paragraph();
-        margin-top: 50px;
         line-height: 30px;
         font-size: 24px;
     }

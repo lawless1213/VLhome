@@ -83,8 +83,7 @@ var scroll = new SmoothScroll('a[href*="#"]');
 // Инициализация слайдеров
 const swiper = new Swiper('.swiper', {
 	slidesPerView: "auto",
-	spaceBetween: 30,
-	freeMode: true,
+	spaceBetween: 30
 });
 
 
