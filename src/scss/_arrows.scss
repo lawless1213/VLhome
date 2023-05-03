@@ -1,0 +1,44 @@
+$borderStyle: 2px solid $colorPrimary;
+
+.arrow {
+	position: relative;
+	background: $colorPrimary;
+
+	&::after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 16px;
+		height: 16px;
+	}
+
+	&.gorizontal {
+		height: 2px;
+		width: 100%;
+		min-width: 30px;
+		margin: 10px 0;
+
+		&::after {
+			right: 1px;
+			top: 50%;
+			transform: translateY(-50%) rotate(45deg);
+			border-top: $borderStyle;
+			border-right: $borderStyle;
+		}
+	}
+
+	&.vertical {
+		width: 2px;
+		height: 100%;
+		min-height: 30px;
+		margin: 0 10px;
+
+		&::after {
+			left: 50%;
+			bottom: 1px;
+			transform: translateX(-50%) rotate(45deg);
+			border-right: $borderStyle;
+			border-bottom: $borderStyle;
+		}
+	}
+}

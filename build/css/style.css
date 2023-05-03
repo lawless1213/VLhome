@@ -1077,6 +1077,53 @@ section .section_description:after {
   border-top: 1px solid #434C56;
 }
 
+.arrow {
+  position: relative;
+  background: #FF4C00;
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.arrow.gorizontal {
+  height: 2px;
+  width: 100%;
+  min-width: 30px;
+  margin: 10px 0;
+}
+
+.arrow.gorizontal::after {
+  right: 1px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  border-top: 2px solid #FF4C00;
+  border-right: 2px solid #FF4C00;
+}
+
+.arrow.vertical {
+  width: 2px;
+  height: 100%;
+  min-height: 30px;
+  margin: 0 10px;
+}
+
+.arrow.vertical::after {
+  left: 50%;
+  bottom: 1px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  border-right: 2px solid #FF4C00;
+  border-bottom: 2px solid #FF4C00;
+}
+
 form input.input {
   padding: 16px 20px;
   background: none;
@@ -1620,6 +1667,7 @@ section.about .section_content .advantages .item .img {
 section.about .section_content .advantages .item span {
   display: block;
   margin: auto;
+  line-height: 150%;
 }
 
 section.about .section_content .info {

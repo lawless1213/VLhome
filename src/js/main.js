@@ -6,7 +6,11 @@ var scroll = new SmoothScroll('a[href*="#"]');
 // Инициализация слайдеров
 const swiperRepair = new Swiper('#repair-list', {
 	slidesPerView: "auto",
-	spaceBetween: 30
+	spaceBetween: 30,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
 });
 
 const swiperPortfolio = new Swiper('#portfolio-gallery', {
