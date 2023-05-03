@@ -1,34 +1,45 @@
 section.calculator {
 	.section_content {
-		.text {
-			.description {
-				position: relative;
-				font-size: 24px;
-				line-height: 30px;
-				padding-left: 50px;
-				margin-top: 50px;
+		display: grid;
+		grid-template-columns: minmax(400px, 700px) minmax(300px, 500px);
+		gap: 70px 10px;
 
-				&:after {
-					content: '';
-					position: absolute;
-					left: 0;
-					top: 0;
-					width: 0;
-					height: 0;
-					border: 0 solid transparent;
-					border-bottom-width: 20px;
-					border-left: 20px solid $colorPrimary;
-				}
+		.text {
+			max-width: 600px;
+			padding-right: 50px;
+
+			.description {
+				@include paragraph();
+				position: relative;
+				margin-top: 50px;
+				line-height: 30px;
+				font-size: 24px;
 			}
 		}
 
 		.works {
+			display: block;
+			align-self: flex-start;
+			width: 100%;
+			min-height: 200px;
+			padding: 30px;
+			line-height: 42px;
+			font-size: 32px;
+			font-weight: 700;
+			color: $colorTextPrimary;
+			background: url('/img/works.jpg');
+			background-repeat: no-repeat;
+			background-position: bottom center;
+			background-size: cover;
+			transition: $transition;
 
+			&:hover {
+				box-shadow: inset 0 0 10px 10px $colorPanel;
+			}
 		}
 
 		.form_calculator {
 			width: 100%;
-			max-width: 700px;
 			padding: 50px;
 			color: $colorTextSecondary;
 			background: $colorTextPrimary;
@@ -78,6 +89,8 @@ section.calculator {
 		.actions {
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: flex-end;
+			align-self: flex-start;
 			gap: 30px;
 
 			button {
@@ -94,6 +107,19 @@ section.calculator {
 				&:hover {
 					color: $colorPrimary;
 				}
+			}
+		}
+
+		@include mediaScreen(0, $tablet-landscape) {
+			grid-template-columns: 1fr;
+
+			.text {
+				max-width: unset;
+				padding-right: 0;
+			}
+
+			.actions {
+				justify-content: space-around;
 			}
 		}
 	}

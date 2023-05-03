@@ -43,15 +43,19 @@ section {
     }
 
     .section_title {
-        line-height: 62px;
-        font-size: 48px;
+        line-height: 52px;
+        font-size: 38px;
         font-weight: 700;
+
+        p {
+            font-weight: 400;
+        }
     
-        .upper {
+        &.upper {
             text-transform: uppercase;
         }
     
-        .dark {
+        &.dark {
             color: $colorTextSecondary;
         }
     }

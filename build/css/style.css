@@ -123,16 +123,20 @@ section.space-top {
 }
 
 section .section_title {
-  line-height: 62px;
-  font-size: 48px;
+  line-height: 52px;
+  font-size: 38px;
   font-weight: 700;
 }
 
-section .section_title .upper {
+section .section_title p {
+  font-weight: 400;
+}
+
+section .section_title.upper {
   text-transform: uppercase;
 }
 
-section .section_title .dark {
+section .section_title.dark {
   color: #282828;
 }
 
@@ -481,6 +485,8 @@ header {
   left: 0;
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
+  z-index: 10;
+  background: rgba(29, 34, 40, 0.3);
 }
 
 header .navbar {
@@ -547,8 +553,8 @@ section.main .section_content {
 
 section.main .section_content h4 {
   margin-top: 20px;
-  line-height: 46px;
-  font-size: 36px;
+  line-height: 36px;
+  font-size: 26px;
 }
 
 section.main .section_content .actions {
@@ -564,12 +570,23 @@ section.main .section_content .actions .button:not(:last-child) {
   margin-right: 100px;
 }
 
+section.calculator .section_content {
+  display: grid;
+  grid-template-columns: minmax(400px, 700px) minmax(300px, 500px);
+  gap: 70px 10px;
+}
+
+section.calculator .section_content .text {
+  max-width: 600px;
+  padding-right: 50px;
+}
+
 section.calculator .section_content .text .description {
-  position: relative;
-  font-size: 24px;
-  line-height: 30px;
   padding-left: 50px;
+  position: relative;
   margin-top: 50px;
+  line-height: 30px;
+  font-size: 24px;
 }
 
 section.calculator .section_content .text .description:after {
@@ -584,9 +601,33 @@ section.calculator .section_content .text .description:after {
   border-left: 20px solid #FF4C00;
 }
 
+section.calculator .section_content .works {
+  display: block;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 100%;
+  min-height: 200px;
+  padding: 30px;
+  line-height: 42px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: url("/img/works.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+section.calculator .section_content .works:hover {
+  -webkit-box-shadow: inset 0 0 10px 10px #1D2228;
+          box-shadow: inset 0 0 10px 10px #1D2228;
+}
+
 section.calculator .section_content .form_calculator {
   width: 100%;
-  max-width: 700px;
   padding: 50px;
   color: #282828;
   background: #FFFFFF;
@@ -654,6 +695,11 @@ section.calculator .section_content .actions {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   gap: 30px;
 }
 
@@ -734,5 +780,19 @@ section.calculator .section_content .actions button:hover {
 
   header .navbar .burger:hover {
     color: #FF4C00;
+  }
+
+  section.calculator .section_content {
+    grid-template-columns: 1fr;
+  }
+
+  section.calculator .section_content .text {
+    max-width: unset;
+    padding-right: 0;
+  }
+
+  section.calculator .section_content .actions {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
