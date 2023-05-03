@@ -157,6 +157,9 @@ section .section_title .dark {
 }
 
 .button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   padding: 16px 30px;
   background-color: #FF4C00;
   -webkit-transition: 0.2s;
@@ -250,6 +253,7 @@ form input[type=radio] + label {
 }
 
 form input[type=radio] + label:hover {
+  color: #FFFFFF;
   background: #FF4C00;
 }
 
@@ -560,15 +564,117 @@ section.main .section_content .actions .button:not(:last-child) {
   margin-right: 100px;
 }
 
+section.calculator .section_content .text .description {
+  position: relative;
+  font-size: 24px;
+  line-height: 30px;
+  padding-left: 50px;
+  margin-top: 50px;
+}
+
+section.calculator .section_content .text .description:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-bottom-width: 20px;
+  border-left: 20px solid #FF4C00;
+}
+
 section.calculator .section_content .form_calculator {
   width: 100%;
-  max-width: 100%;
-  background: #FFFFFF;
+  max-width: 700px;
+  padding: 50px;
   color: #282828;
+  background: #FFFFFF;
+}
+
+section.calculator .section_content .form_calculator .form_title {
+  line-height: 50px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+section.calculator .section_content .form_calculator .question_block {
+  margin-top: 50px;
 }
 
 section.calculator .section_content .form_calculator .question_block .question_title {
+  margin-bottom: 10px;
   color: #999999;
+}
+
+section.calculator .section_content .form_calculator .question_block .answers_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+section.calculator .section_content .form_calculator .question_block .answers_list .square_range {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 450px;
+}
+
+section.calculator .section_content .form_calculator .question_block .answers_list .square_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+
+section.calculator .section_content .form_calculator .button {
+  margin: 50px auto 0;
+}
+
+section.calculator .section_content .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
+section.calculator .section_content .actions button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 250px;
+          flex: 1 1 250px;
+  max-width: 350px;
+  padding: 30px;
+  line-height: 36px;
+  font-size: 26px;
+  color: #FFFFFF;
+  background: none;
+  border: 1px solid #FF4C00;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+section.calculator .section_content .actions button:hover {
+  color: #FF4C00;
 }
 
 @media (max-width: 1023.8px) {

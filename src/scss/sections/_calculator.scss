@@ -1,7 +1,25 @@
 section.calculator {
 	.section_content {
 		.text {
+			.description {
+				position: relative;
+				font-size: 24px;
+				line-height: 30px;
+				padding-left: 50px;
+				margin-top: 50px;
 
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 0;
+					height: 0;
+					border: 0 solid transparent;
+					border-bottom-width: 20px;
+					border-left: 20px solid $colorPrimary;
+				}
+			}
 		}
 
 		.works {
@@ -10,17 +28,71 @@ section.calculator {
 
 		.form_calculator {
 			width: 100%;
-			max-width: 100%;
-			background: $colorWhite;
+			max-width: 700px;
+			padding: 50px;
 			color: $colorTextSecondary;
+			background: $colorTextPrimary;
 
 			.form_title {
-
+				line-height: 50px;
+				font-size: 40px;
+				font-weight: 600;
 			}
 
 			.question_block {
+				margin-top: 50px;
+
 				.question_title {
+					margin-bottom: 10px;
 					color: $colorTextTertiary;
+				}
+
+				.answers_list {
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+					gap: 20px;
+
+					.square_range {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						width: 100%;
+						max-width: 450px;
+					}
+
+					.square_input {
+						display: flex;
+						flex-wrap: nowrap;
+						align-items: center;
+						gap: 4px;
+					}
+				}
+			}
+
+			.button {
+				margin: 50px auto 0;
+			}
+		}
+
+		.actions {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 30px;
+
+			button {
+				flex: 1 1 250px;
+				max-width: 350px;
+				padding: 30px;
+				line-height: 36px;
+				font-size: 26px;
+				color: $colorTextPrimary;
+				background: none;
+				border: 1px solid $colorPrimary;
+				transition: $transition;
+
+				&:hover {
+					color: $colorPrimary;
 				}
 			}
 		}

@@ -26,6 +26,7 @@ form {
 			cursor: pointer;
 
 			&:hover {
+				color: $colorWhite;
 				background: $colorPrimary;
 			}
 		}
