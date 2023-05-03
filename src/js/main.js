@@ -3,9 +3,10 @@
 // Инициализация плавного скрола по якорям
 var scroll = new SmoothScroll('a[href*="#"]');
 
+// Инициализация слайдеров
+const swiper = new Swiper('.swiper', {
+	slidesPerView: "auto",
+	spaceBetween: 30,
+	freeMode: true,
+});
 
-if (window.jQuery) {
-  console.log('jQuery подключен к странице');
-} else {
-	console.log('jQuery не подключен к странице');
-}
