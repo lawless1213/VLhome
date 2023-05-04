@@ -18,6 +18,11 @@ $colorTextSecondary: #282828;
 $colorTextTertiary: #999999;
 $colorTextQuaternary: #8597AB;
 
+// Section
+$sectionSpace: 100px;
+$sectionBg: $colorPanel;
+// -------------------
+
 // Container
 @use 'sass:math';
 $containerWidth: 1200;

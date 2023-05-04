@@ -1,0 +1,87 @@
+section.make_with {
+	position: relative;
+	overflow: hidden;
+
+	.image_flat {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 350px;
+
+		@include mediaScreen(0, $tablet-landscape) {
+			right: -130px;
+    	bottom: -130px;
+		}
+	}
+
+	.section_content {
+		position: relative;
+		display: grid;
+		grid-template-columns: auto auto 1fr;
+
+		.section_aside {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 100%;
+			padding: 0 50px 0 30px;
+			gap: 30px;
+
+			.img {
+				flex: 0;
+			}
+
+			.arrow {
+				flex: 1;
+			}
+		}
+		
+		.divider_vertical {
+			height: calc(100% + 2 * $sectionSpace);
+			margin: -$sectionSpace 0;
+		}
+
+		.content {
+			margin-left: 50px;
+
+			.form_callback {
+				margin-top: 50px;
+
+				input,
+				.button {
+					min-width: 400px;
+				}
+
+				.question_title {
+					margin-bottom: 10px;
+					color: $colorTextTertiary;
+				}
+
+				input {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+
+	@include mediaScreen($tablet-landscape) {
+		.mobile {
+			display: none;
+		}
+	}
+
+	@include mediaScreen(0, $tablet-landscape) {
+		.desktop {
+			display: none;
+		}
+
+		.section_content {
+			grid-template-columns: 1fr;
+			
+			.section_aside {
+				flex-direction: row;
+				padding: 0;
+			}
+		}
+	}
+}

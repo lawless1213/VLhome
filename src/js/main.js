@@ -15,7 +15,7 @@ const swiperRepair = new Swiper('#repair-list', {
 });
 
 const swiperPortfolio = new Swiper('#portfolio-gallery', {
-	slidesPerView: "auto",
+	slidesPerView: 1,
 	spaceBetween: 30,
 	parallax: true,
 	autoplay: {
@@ -32,6 +32,26 @@ const swiperPortfolio = new Swiper('#portfolio-gallery', {
 	navigation: {
 		nextEl: '.gallery-next',
 		prevEl: '.gallery-prev',
+	},
+});
+
+const swiperReviews = new Swiper('#reviews-list', {
+	slidesPerView: 1,
+	spaceBetween: 30,
+	autoplay: {
+		delay: 10000,
+	},
+	loop: true,
+	pagination: {
+		el: '.review-pagination',
+		clickable: true,
+		bulletClass: 'dot',
+		bulletActiveClass: 'dot-active',
+	},
+
+	navigation: {
+		nextEl: '.review-next',
+		prevEl: '.review-prev',
 	},
 });
 

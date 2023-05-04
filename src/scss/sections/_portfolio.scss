@@ -62,56 +62,5 @@ section.portfolio {
 				}
 			}
 		}
-
-		.swiper-button-prev,
-		.swiper-button-next {
-			width: 50px;
-			height: 50px;
-			background: $colorPrimary;
-
-			&::after {
-				content: '';
-				width: 0;
-				height: 0;
-				border: 0 solid transparent;
-			}
-		}
-
-		.swiper-button-prev {
-			&::after {
-				border-top-width: 14px;
-				border-right: 12px solid $colorWhite;
-				border-bottom-width: 14px;
-			}
-		}
-
-		.swiper-button-next {
-			&::after {
-				border-top-width: 14px;
-				border-bottom-width: 14px;
-				border-left: 12px solid $colorWhite;
-			}
-		}
-
-		.swiper-pagination {
-			position: static;
-			display: flex;
-			justify-content: center;
-			margin-top: 10px;
-			gap: 6px;
-
-			.dot {
-				display: block;
-				width: 50px;
-				height: 10px;
-				border: 2px solid $colorPrimary;
-				transition: $transition;
-				cursor: pointer;
-
-				&-active {
-					background: $colorPrimary;
-				}
-			}
-		}
 	}
 }
