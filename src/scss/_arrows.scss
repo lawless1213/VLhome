@@ -1,8 +1,8 @@
-$borderStyle: 2px solid $colorPrimary;
+$borderStyle: 2px solid $colorTextQuaternary;
 
 .arrow {
 	position: relative;
-	background: $colorPrimary;
+	background: $colorTextQuaternary;
 
 	&::after {
 		content: '';

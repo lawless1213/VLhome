@@ -1,0 +1,27 @@
+.slider {
+	position: relative;
+
+	.shadow-prev,
+	.shadow-next{
+		width: 50px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		transition: $transition;
+
+		&.disabled {
+			width: 0;
+		}
+	}
+
+	.shadow-next{
+		right: 0;
+		background: linear-gradient(90deg, rgba($colorWhite, 0) 40%, rgba($colorWhite, 1) 100%);
+	}
+
+	.shadow-prev{
+		left: 0;
+		background: linear-gradient(90deg, rgba($colorWhite, 1) 40%, rgba($colorWhite, 0) 100%);
+	}
+}

@@ -84,10 +84,11 @@ var scroll = new SmoothScroll('a[href*="#"]');
 const swiperRepair = new Swiper('#repair-list', {
 	slidesPerView: "auto",
 	spaceBetween: 30,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
+	// navigation: {
+	// 	nextEl: '.shadow-next',
+	// 	prevEl: '.shadow-prev',
+	// 	disabledClass: 'disabled',
+	// },
 });
 
 const swiperPortfolio = new Swiper('#portfolio-gallery', {
@@ -99,15 +100,15 @@ const swiperPortfolio = new Swiper('#portfolio-gallery', {
 	},
 	loop: true,
 	pagination: {
-		el: '.swiper-pagination',
+		el: '.gallery-pagination',
 		clickable: true,
 		bulletClass: 'dot',
 		bulletActiveClass: 'dot-active',
 	},
 
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.gallery-next',
+		prevEl: '.gallery-prev',
 	},
 });
 

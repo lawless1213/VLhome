@@ -1079,7 +1079,7 @@ section .section_description:after {
 
 .arrow {
   position: relative;
-  background: #FF4C00;
+  background: #8597AB;
 }
 
 .arrow::after {
@@ -1103,8 +1103,8 @@ section .section_description:after {
   -webkit-transform: translateY(-50%) rotate(45deg);
       -ms-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
-  border-top: 2px solid #FF4C00;
-  border-right: 2px solid #FF4C00;
+  border-top: 2px solid #8597AB;
+  border-right: 2px solid #8597AB;
 }
 
 .arrow.vertical {
@@ -1120,8 +1120,8 @@ section .section_description:after {
   -webkit-transform: translateX(-50%) rotate(45deg);
       -ms-transform: translateX(-50%) rotate(45deg);
           transform: translateX(-50%) rotate(45deg);
-  border-right: 2px solid #FF4C00;
-  border-bottom: 2px solid #FF4C00;
+  border-right: 2px solid #8597AB;
+  border-bottom: 2px solid #8597AB;
 }
 
 form input.input {
@@ -1258,6 +1258,41 @@ form input[type=range]:focus::-ms-fill-lower {
 
 form input[type=range]:focus::-ms-fill-upper {
   background: #FB7405;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider .shadow-prev,
+.slider .shadow-next {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider .shadow-prev.disabled,
+.slider .shadow-next.disabled {
+  width: 0;
+}
+
+.slider .shadow-next {
+  right: 0;
+  background: -webkit-gradient(linear, left top, right top, color-stop(40%, rgba(255, 255, 255, 0)), to(white));
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 40%, white 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 40%, white 100%);
+}
+
+.slider .shadow-prev {
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, color-stop(40%, white), to(rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(left, white 40%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(90deg, white 40%, rgba(255, 255, 255, 0) 100%);
 }
 
 .aside {
@@ -1879,6 +1914,56 @@ section.portfolio .portfolio_gallery .swiper-pagination .dot-active {
   background: #FF4C00;
 }
 
+section.scheme .section_content .scheme_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+section.scheme .section_content .scheme_list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 16px;
+}
+
+section.scheme .section_content .scheme_list .item .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+section.scheme .section_content .scheme_list .item .step span {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  line-height: 20px;
+  font-weight: 600;
+  color: #8597AB;
+}
+
+section.scheme .section_content .scheme_list .item .text .title {
+  margin-bottom: 16px;
+  line-height: 24px;
+  font-size: 20px;
+}
+
+section.scheme .section_content .scheme_list .item .text .description {
+  margin-top: auto;
+  line-height: 22px;
+  font-size: 16px;
+  color: #8597AB;
+}
+
 .repair_card {
   width: 370px;
   height: auto;
@@ -1913,6 +1998,12 @@ section.portfolio .portfolio_gallery .swiper-pagination .dot-active {
 
 .repair_card .button {
   margin-top: 30px;
+}
+
+@media (min-width: 1024px) {
+  section.scheme .section_content .scheme_list .mobile {
+    display: none;
+  }
 }
 
 @media (max-width: 1023.8px) {
@@ -1991,5 +2082,63 @@ section.portfolio .portfolio_gallery .swiper-pagination .dot-active {
   section.portfolio .portfolio_gallery .gallery_item .info {
     position: static;
     margin-top: 20px;
+  }
+
+  section.scheme .section_content .scheme_list {
+    grid-template-columns: 1fr;
+  }
+
+  section.scheme .section_content .scheme_list .desktop {
+    display: none;
+  }
+
+  section.scheme .section_content .scheme_list .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 16px;
+    min-height: 150px;
+  }
+
+  section.scheme .section_content .scheme_list .item .step {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: auto;
+    height: 100%;
+    gap: 20px;
+  }
+
+  section.scheme .section_content .scheme_list .item .step span {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+    line-height: 20px;
+    font-weight: 600;
+    color: #8597AB;
+  }
+
+  section.scheme .section_content .scheme_list .item .text .title {
+    margin-bottom: 16px;
+    line-height: 24px;
+    font-size: 20px;
+  }
+
+  section.scheme .section_content .scheme_list .item .text .description {
+    margin-top: auto;
+    line-height: 22px;
+    font-size: 16px;
+    color: #8597AB;
   }
 }
