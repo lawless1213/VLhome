@@ -2020,6 +2020,60 @@ section.make_with .section_content .content .form_callback input {
   margin-bottom: 30px;
 }
 
+section.reviews .section_content .reviews_list .item {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+}
+
+section.reviews .section_content .reviews_list .item .info {
+  background: #1D2228;
+  padding: 50px 30px;
+}
+
+section.reviews .section_content .reviews_list .item .info > .title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+section.reviews .section_content .reviews_list .item .text-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px 30px;
+}
+
+section.reviews .section_content .reviews_list .item .text-group.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.reviews .section_content .reviews_list .item .text-group .text {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+section.reviews .section_content .reviews_list .item .text-group .small_text {
+  font-size: 16px;
+}
+
+section.reviews .section_content .reviews_list .item .image {
+  height: 100%;
+}
+
+section.reviews .section_content .reviews_list .item .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .repair_card {
   width: 370px;
   height: auto;

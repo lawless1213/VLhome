@@ -1,0 +1,50 @@
+section.reviews {
+	.section_content {
+		.reviews_list {
+			.item {
+				display: grid;
+				grid-template-columns: 1fr 500px;
+
+				.info {
+					background: $colorPanel;
+					padding: 50px 30px;
+
+					> .title {
+						font-size: 28px;
+						font-weight: 700;
+					}
+				}
+
+				.text-group {
+					display: flex;
+					align-items: flex-start;
+					gap: 10px 30px;
+
+					&.column {
+						flex-direction: column;
+					}
+
+					.text {
+						font-size: 22px;
+						font-weight: 700;
+					}
+
+					.small_text {
+						font-size: 16px;
+					}
+				}
+
+				.image {
+					height: 100%;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						object-position: center;
+					}
+				}
+			}
+		}
+	}
+}
