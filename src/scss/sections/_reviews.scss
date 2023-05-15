@@ -2,11 +2,11 @@ section.reviews {
 	.section_content {
 		.reviews_list {
 			.item {
-				background: $colorPanel;
 				display: grid;
 				grid-template-columns: 1fr 500px;
 				width: calc(100% - 140px);
 				margin: 0 auto;
+				background: $colorPanel;
 
 				.info {
 					padding: 50px 30px;
@@ -19,8 +19,8 @@ section.reviews {
 					.object {
 						display: flex;
 						flex-wrap: wrap;
-						gap: 20px;
 						justify-content: space-between;
+						gap: 20px;
 					}
 
 					.task {
@@ -66,23 +66,21 @@ section.reviews {
 				}
 
 				@include mediaScreen(0, $desktop) {
-					width: 100%;
 					grid-template-columns: 1fr;
-					padding: 20px;
+					width: 100%;
 					gap: 20px;
 
-					.info {
-						padding: 0;
-					}
+					
 
 					.image {
-						height: 400px;
+						width: 100%;
+						height: 500px;
 					}
 				}
 
 				@include mediaScreen(0, $tablet-portrait) {
-					.text-group {
-						flex-direction: column;
+					.image {
+						height: 400px;
 					}
 				}
 			}
