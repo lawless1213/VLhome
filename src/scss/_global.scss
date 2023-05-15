@@ -7,12 +7,12 @@
 
     .no_container {
         display: block;
-        margin-right: -($containerPadding + px);
-        margin-left: -($containerPadding + px);
+        margin-right: -($containerSidePadding + px);
+        margin-left: -($containerSidePadding + px);
     
         .container_wrap {
-          padding-right: $containerPadding + px;
-          padding-left: $containerPadding + px;
+          padding-right: $containerSidePadding + px;
+          padding-left: $containerSidePadding + px;
         }
     }
 }

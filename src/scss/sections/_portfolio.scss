@@ -62,5 +62,12 @@ section.portfolio {
 				}
 			}
 		}
+
+		@include mediaScreen(0, $tablet-portrait) {
+			.swiper-button-prev,
+			.swiper-button-next {
+				display: none;
+			}
+		}
 	}
 }
