@@ -32,14 +32,14 @@ body {
 }
 
 //Section 
+.space-top {
+    margin-top: $sectionSpace;
+}
+
 section {
     &.dark {
         padding: $sectionSpace 0;
         background-color: $sectionBg;
-    }
-
-    &.space-top {
-        margin-top: $sectionSpace;
     }
 
     .section_title {

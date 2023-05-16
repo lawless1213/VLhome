@@ -7,11 +7,12 @@ section.offers {
 
 			.offer_card {
 				display: flex;
-				gap: 10px;
 				flex-direction: column;
+				align-items: flex-start;
 				padding: 20px;
-				background: $colorPanel;
 				line-height: 1.3;
+				background: $colorPanel;
+				gap: 10px;
 
 
 				> .title {
