@@ -5,8 +5,10 @@
         }
 
         &.active {
-            .toggle_icon {
-                transform: rotateX(180deg);
+            .accordion_toggle {
+                .toggle_icon {
+                    transform: rotateX(0);
+                }
             }
 
             .accordion_content {
@@ -17,48 +19,49 @@
 
         .accordion_toggle {
             display: flex;
-            padding: 20px 0;
             align-items: center;
+            padding: 20px 0;
             cursor: pointer;
 
             .toggle_num {
                 margin-right: 10px;
-                font-style: normal;
-                font-weight: 700;
-                font-size: 24px;
                 line-height: 28px;
+                font-size: 24px;
+                font-weight: 700;
+                font-style: normal;
                 color: $colorPrimary;
             }
 
             .toggle_text {
-                font-style: normal;
-                font-weight: 700;
-                font-size: 22px;
-                line-height: 28px;
-                color: $colorTextSecondary;
                 margin-left: 10px;
+                line-height: 28px;
+                font-size: 22px;
+                font-weight: 700;
+                font-style: normal;
+                color: $colorTextSecondary;
             }
 
             .toggle_icon {
-                margin-left: auto;
                 height: 0;
+                margin-left: auto;
                 border: 0 solid transparent;
                 border-right-width: 12px;
-                border-left-width: 12px;
                 border-bottom: 12px solid $colorPrimary;
+                border-left-width: 12px;
                 transition: $transition;
+                transform: rotateX(180deg);
             }
         }
 
         .accordion_content {
-            padding-bottom: 20px;
             display: none;
+            padding-bottom: 20px;
             animation: fade .3s ease;
 
             .text {
-                font-size: 16;
-                line-height: 20px;
                 margin-top: 26px;
+                line-height: 20px;
+                font-size: 16;
                 color: $colorTextSecondary;
 
                 &:first-child {

@@ -18,10 +18,7 @@ section.main {
 			display: flex;
 			flex-wrap: wrap;
 			margin-top: 60px;
-
-			.button:not(:last-child) {
-				margin-right: 100px;
-			}
+			gap: 10px 100px;
 		}
 	}
 }

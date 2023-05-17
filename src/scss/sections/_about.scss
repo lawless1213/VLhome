@@ -10,6 +10,10 @@ section.about {
 			flex: 1;
 			width: 100%;
 			min-width: 640px;
+
+			@include mediaScreen(0, $tablet-portrait) {
+				min-width: 400px;
+			}
 		}
 
 		.advantages {
@@ -45,7 +49,7 @@ section.about {
 		
 		.info {
 			display: grid;
-			grid-template-columns: repeat(2, 250px);
+			grid-template-columns: repeat(2, minmax(0, 250px));
 			gap: 20px;
 
 			.item {

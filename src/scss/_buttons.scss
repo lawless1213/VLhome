@@ -3,12 +3,14 @@
 	justify-content: center;
 	align-items: center;
 	min-height: 50px;
-	padding: 0 30px;
+	padding: 10px 30px;
 	line-height: 26px;
 	font-size: 20px;
+	text-align: center;
 	color: $colorTextPrimary;
 	background-color: $colorPrimary;
 	transition: $transition;
+	cursor: pointer;
 
 	&:hover {
 		background-color: $colorSecondary;
@@ -16,6 +18,10 @@
 
 	&.big {
 		min-height: 90px;
+	}
+
+	&.fluid {
+		width: 100%;
 	}
 }
 
