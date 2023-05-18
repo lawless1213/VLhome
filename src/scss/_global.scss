@@ -34,6 +34,10 @@ body {
 //Section 
 .space-top {
     margin-top: $sectionSpace;
+
+    @include mediaScreen(0, $tablet-portrait) {
+		margin-top: $sectionSpaceMobile;
+	}
 }
 
 section {
@@ -66,6 +70,14 @@ section {
         line-height: 30px;
         font-size: 24px;
     }
+
+    @include mediaScreen(0, $tablet-portrait) {
+		.section_title {
+            margin-bottom: 20px;
+            line-height: 42px;
+            font-size: 28px;
+        }
+	}
 }
 
 // Animations

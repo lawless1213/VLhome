@@ -21,4 +21,23 @@ section.main {
 			gap: 10px 100px;
 		}
 	}
+
+	@include mediaScreen(0, $tablet-portrait) {
+		padding: calc(50px + $headerHeight) 0 50px;
+
+		.section_content {
+			h4 {
+				margin-top: 10px;
+				line-height: 26px;
+				font-size: 18px;
+			}
+	
+			.actions {
+				display: flex;
+				flex-wrap: wrap;
+				margin-top: 30px;
+				gap: 10px 100px;
+			}
+		}
+	}
 }

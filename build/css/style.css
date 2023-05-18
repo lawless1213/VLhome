@@ -2521,6 +2521,36 @@ section.offers .section_content .offers_gallery .offer_card .desc {
 }
 
 @media (max-width: 767.8px) {
+  .space-top {
+    margin-top: 50px;
+  }
+
+  section .section_title {
+    margin-bottom: 20px;
+    line-height: 42px;
+    font-size: 28px;
+  }
+
+  section.main {
+    padding: 130px 0 50px;
+  }
+
+  section.main .section_content h4 {
+    margin-top: 10px;
+    line-height: 26px;
+    font-size: 18px;
+  }
+
+  section.main .section_content .actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 10px 100px;
+  }
+
   section.about .section_content .text {
     min-width: 400px;
   }
