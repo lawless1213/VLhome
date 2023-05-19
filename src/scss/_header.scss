@@ -84,10 +84,13 @@ header {
 					width: 100%;
 					height: 2px;
 					background: currentColor;
+					transition: $transition;
 				}
 
 				&:hover {
-					color: $burgerActiveColor;
+					* {
+						color: $burgerActiveColor;
+					}
 				}
 			}
 		}

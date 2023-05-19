@@ -3399,7 +3399,7 @@ $document.on('click', '.close_aside', close);
 // Custom scripts
 
 // Инициализация плавного скрола по якорям
-var scroll = new SmoothScroll('a[href*="#"]');
+var scroll = new SmoothScroll('a[href*="#"]', {durationMax: 2000});
 
 // Инициализация слайдеров
 const swiperMenuHeader = new Swiper('#header-menu', {
