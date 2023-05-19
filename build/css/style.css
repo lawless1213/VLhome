@@ -1029,7 +1029,7 @@ section .section_description:after {
 }
 
 .button.big {
-  min-height: 90px;
+  min-height: 70px;
 }
 
 .button.fluid {
@@ -1174,6 +1174,10 @@ form input.input {
 
 form input.input.small {
   width: 100px;
+}
+
+form input.input.dark {
+  color: #FFFFFF;
 }
 
 form input[type=radio] {
@@ -2152,17 +2156,14 @@ section.make_with .section_content .divider_vertical {
   margin: -100px 0;
 }
 
-section.make_with .section_content .content {
-  margin-left: 50px;
-}
-
 section.make_with .section_content .content .form_callback {
   margin-top: 50px;
 }
 
 section.make_with .section_content .content .form_callback input,
 section.make_with .section_content .content .form_callback .button {
-  min-width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 section.make_with .section_content .content .form_callback .question_title {
@@ -2347,6 +2348,10 @@ section.offers .section_content .offers_gallery .offer_card .desc {
   section.make_with .mobile {
     display: none;
   }
+
+  section.make_with .content {
+    margin-left: 50px;
+  }
 }
 
 @media (max-width: 1199.8px) {
@@ -2525,10 +2530,38 @@ section.offers .section_content .offers_gallery .offer_card .desc {
     margin-top: 50px;
   }
 
+  section.dark {
+    padding: 50px 0;
+    background-color: #1D2228;
+  }
+
   section .section_title {
     margin-bottom: 20px;
-    line-height: 42px;
+    line-height: 32px;
     font-size: 28px;
+  }
+
+  section .section_description {
+    position: relative;
+    padding-left: 50px;
+    line-height: 24px;
+    font-size: 16px;
+  }
+
+  section .section_description:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-bottom-width: 20px;
+    border-left: 20px solid #FF4C00;
+  }
+
+  form input[type=radio] + label {
+    padding: 10px;
   }
 
   section.main {
@@ -2551,8 +2584,24 @@ section.offers .section_content .offers_gallery .offer_card .desc {
     gap: 10px 100px;
   }
 
+  section.calculator .section_content .form_calculator .question_block {
+    margin-top: 20px;
+  }
+
+  section.calculator .section_content .form_calculator .question_block .answers_list {
+    gap: 10px;
+  }
+
+  section.calculator .section_content .form_calculator {
+    padding: 20px;
+  }
+
   section.about .section_content .text {
     min-width: 400px;
+  }
+
+  section.about .section_content .text {
+    min-width: 200px;
   }
 
   section.portfolio .portfolio_gallery .swiper-button-prev,
@@ -2571,5 +2620,26 @@ section.offers .section_content .offers_gallery .offer_card .desc {
 
   section.offers .section_content .offers_gallery {
     gap: 10px;
+  }
+}
+
+@media (max-width: 575.8px) {
+  section.calculator .section_content {
+    gap: 50px;
+  }
+
+  section.calculator .section_content .actions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  section.calculator .section_content .actions button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: unset;
+    padding: 20px;
   }
 }

@@ -72,10 +72,21 @@ section {
     }
 
     @include mediaScreen(0, $tablet-portrait) {
+        &.dark {
+            padding: $sectionSpaceMobile 0;
+            background-color: $sectionBg;
+        }
+
 		.section_title {
             margin-bottom: 20px;
-            line-height: 42px;
+            line-height: 32px;
             font-size: 28px;
+        }
+
+        .section_description {
+            @include paragraph();
+            line-height: 24px;  
+            font-size: 16px;
         }
 	}
 }

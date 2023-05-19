@@ -42,14 +42,13 @@ section.make_with {
 		}
 
 		.content {
-			margin-left: 50px;
-
 			.form_callback {
 				margin-top: 50px;
 
 				input,
 				.button {
-					min-width: 400px;
+					width: 100%;
+					max-width: 400px;
 				}
 
 				.question_title {
@@ -67,6 +66,10 @@ section.make_with {
 	@include mediaScreen($tablet-landscape) {
 		.mobile {
 			display: none;
+		}
+
+		.content {
+			margin-left: 50px;
 		}
 	}
 

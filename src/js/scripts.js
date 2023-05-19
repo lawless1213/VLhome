@@ -3,5 +3,6 @@
 @@include('aside.js')
 @@include('libs/smooth-scroll.min(lib).js')
 @@include('libs/swiper(lib).js')
+@@include('libs/imask.js')
 @@include('main.js')
 

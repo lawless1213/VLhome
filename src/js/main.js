@@ -74,3 +74,36 @@ function accordion() {
 
 accordion() 
 
+// Masks
+function  masks() {
+	const elements = document.querySelectorAll('[data-mask="phone"]');
+  if (!elements) return;
+	
+  const phoneOptions = { 
+    mask: '+{38(0}00)000-00-00' 
+  }
+
+  elements.forEach(el => { 
+    IMask(el, phoneOptions) 
+  })
+}
+
+masks();
+
+//Slider(range) in input
+function range() {
+	const elements = document.querySelectorAll('[type="range"]');
+	if (!elements) return;
+
+	elements.forEach(el => { 
+    let target = document.querySelector(el.dataset.targetInput);
+
+		if(target) {
+			el.addEventListener('input', (event) => {
+				target.value = event.target.value;
+			})
+		}
+  })
+}
+
+range();

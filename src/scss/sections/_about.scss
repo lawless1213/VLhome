@@ -14,6 +14,10 @@ section.about {
 			@include mediaScreen(0, $tablet-portrait) {
 				min-width: 400px;
 			}
+
+			@include mediaScreen(0, $tablet-portrait) {
+				min-width: 200px;
+			}
 		}
 
 		.advantages {

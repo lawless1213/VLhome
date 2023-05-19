@@ -10,6 +10,10 @@ form {
 			width: 100px;
 		}
 
+		&.dark {
+			color: $colorTextPrimary;
+		}
+
 		& + .caption {
 
 		}
@@ -33,6 +37,12 @@ form {
 
 		&:checked + label {
 			background: $colorPrimary;
+		}
+
+		@include mediaScreen(0, $tablet-portrait) {
+			& + label {
+				padding: 10px;
+			}
 		}
 	}
 

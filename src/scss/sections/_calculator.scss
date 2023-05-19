@@ -71,6 +71,14 @@ section.calculator {
 						gap: 4px;
 					}
 				}
+
+				@include mediaScreen(0, $tablet-portrait) {
+					margin-top: 20px;
+
+					.answers_list {
+						gap: 10px;
+					}
+				}
 			}
 
 			.button {
@@ -112,6 +120,26 @@ section.calculator {
 
 			.actions {
 				justify-content: space-around;
+			}
+		}
+
+		@include mediaScreen(0, $tablet-portrait) {
+			.form_calculator {
+				padding: 20px;
+			}
+		}
+
+		@include mediaScreen(0, $phone) {
+			gap: 50px;
+
+			.actions {
+				flex-direction: column;
+
+				button {
+					flex: 1;
+					max-width: unset;
+					padding: 20px;
+				}
 			}
 		}
 	}
