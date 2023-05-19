@@ -6,7 +6,7 @@ var scroll = new SmoothScroll('a[href*="#"]');
 // Инициализация слайдеров
 const swiperMenuHeader = new Swiper('#header-menu', {
 	slidesPerView: "auto",
-	spaceBetween: 10,
+	spaceBetween: 0,
 });
 
 const swiperRepair = new Swiper('#repair-list', {
@@ -112,3 +112,32 @@ function range() {
 }
 
 range();
+
+// Modals
+function bindModal(trigger, modal, close) {
+  	let triggers = document.querySelectorAll(trigger);
+    let modal = document.querySelector(modal);
+    let close = document.querySelector(close);
+
+  const body = document.body;
+
+  triggers.forEach(trigger => {
+		trigger.addEventListener('click', e => {
+			e.preventDefault()
+			modal.style.display = 'flex'
+			body.classList.add('locked')
+		});
+	})
+  close.addEventListener('click', () => {
+    modal.style.display = 'none'
+     body.classList.remove('locked')
+  });
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.style.display = 'none'
+       body.classList.remove('locked')
+    }
+  })
+}
+
+bindModal('[data-modal="callback"]', '.modal__wrapper', '.modal__close')

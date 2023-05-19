@@ -32,6 +32,10 @@
 	padding: 10px 20px;
 	color: $colorTextPrimary;
 	transition: $transition;
+
+	&.no_wrap {
+		white-space: nowrap;
+	}
 	
 	&:after,
 	&:before {

@@ -52,7 +52,7 @@
                 <li class="menu__item swiper-slide"><a href="#offers" class="menu__item-link nav-link">Послуги</a></li>
                 <li class="menu__item swiper-slide"><a href="#faq" class="menu__item-link nav-link" >FAQ</a></li>
             </ul> -->
-            <a class="phone nav-link" href="tel:+380504165052">+38(050)416 50 52</a> 
+            <a class="phone nav-link no_wrap" href="tel:+380504165052">+38(050)416 50 52</a> 
             <div class="burger" data-toggle="aside" data-aside-id="aside-menu">
                 <span></span>
             </div>
@@ -70,7 +70,7 @@
 				<h4>у м. Київ та області</h4>
 				<div class="actions">
 					<button class="button">Розрахувати вартість</button>
-					<button class="button">Залишити заявку</button>
+					<button class="button" data-modal="callback">Залишити заявку</button>
 				</div>
 			</div>
 	</div>
@@ -661,6 +661,15 @@
     </div>
 </footer>
 
+    <!-- Modals -->
+    <div class="modal__wrapper">
+	<div class="modal">
+			<div class="modal__close"> <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px"></div>
+			<div class="modal__title"><span>Заголовок</span> </div>
+			<div class="modal__body">
+			</div>
+	</div>
+</div>
 </body>
 
 <script src="./js/scripts.min.js"></script>
