@@ -34,14 +34,24 @@
     <div class="container">
         <div class="navbar">
             <a class="logo" href="#header" ><img src="img/logo.svg" alt=""></a>
-            <ul class="menu">
-                <li class="menu__item"><a href="#calculator" class="menu__item-link nav-link">Дізнатись вартість</a></li>
-                <li class="menu__item"><a href="#about" class="menu__item-link nav-link">Про нас</a></li>
-                <li class="menu__item"><a href="#portfolio" class="menu__item-link nav-link">Наші роботи</a></li>
-                <li class="menu__item"><a href="#reviews" class="menu__item-link nav-link">Відгуки</a></li>
-                <li class="menu__item"><a href="#offers" class="menu__item-link nav-link">Послуги</a></li>
-                <li class="menu__item"><a href="#faq" class="menu__item-link nav-link" >FAQ</a></li>
-            </ul>
+            <div class="menu swiper slider" id="header-menu">
+                <ul class="swiper-wrapper">
+                    <li class="menu__item swiper-slide"><a href="#calculator" class="menu__item-link nav-link">Дізнатись вартість</a></li>
+                    <li class="menu__item swiper-slide"><a href="#about" class="menu__item-link nav-link">Про нас</a></li>
+                    <li class="menu__item swiper-slide"><a href="#portfolio" class="menu__item-link nav-link">Наші роботи</a></li>
+                    <li class="menu__item swiper-slide"><a href="#reviews" class="menu__item-link nav-link">Відгуки</a></li>
+                    <li class="menu__item swiper-slide"><a href="#offers" class="menu__item-link nav-link">Послуги</a></li>
+                    <li class="menu__item swiper-slide"><a href="#faq" class="menu__item-link nav-link" >FAQ</a></li>
+                </ul>
+            </div>
+            <!-- <ul class="menu">
+                <li class="menu__item swiper-slide"><a href="#calculator" class="menu__item-link nav-link">Дізнатись вартість</a></li>
+                <li class="menu__item swiper-slide"><a href="#about" class="menu__item-link nav-link">Про нас</a></li>
+                <li class="menu__item swiper-slide"><a href="#portfolio" class="menu__item-link nav-link">Наші роботи</a></li>
+                <li class="menu__item swiper-slide"><a href="#reviews" class="menu__item-link nav-link">Відгуки</a></li>
+                <li class="menu__item swiper-slide"><a href="#offers" class="menu__item-link nav-link">Послуги</a></li>
+                <li class="menu__item swiper-slide"><a href="#faq" class="menu__item-link nav-link" >FAQ</a></li>
+            </ul> -->
             <a class="phone nav-link" href="tel:+380504165052">+38(050)416 50 52</a> 
             <div class="burger" data-toggle="aside" data-aside-id="aside-menu">
                 <span></span>
@@ -56,7 +66,7 @@
 	<div class="container">
 			<div class="section_content">
 				<h1 class="section_title">Професійний ремонт та оздоблення нерухомості "під ключ"</h1>
-				<h4>З фіксованою датою та вартісю по договору</h4>
+				<h4>З фіксованою датою та вартістю по договору</h4>
 				<h4>у м. Київ та області</h4>
 				<div class="actions">
 					<button class="button">Розрахувати вартість</button>
@@ -106,7 +116,7 @@
 					</div>
 
 					<div class="question_block">
-						<div class="question_title">Вид ремонта</div>
+						<div class="question_title">Вид ремонту</div>
 						<div class="answers_list">
 							<div class="answer">
 								<input type="radio" id="kind1" name="kind" value="Косметичний">
@@ -128,12 +138,12 @@
 							<div class="answers_list">
 								<div class="square_range">
 									<input class="range" data-target-input="[name='square']" type="range" min="20" max="300" step="1" value="0">
-									<span class="range_min">20м2</span>
-									<span class="range_max">300м2</span>
+									<span class="range_min">20м<sup>2</sup></span>
+									<span class="range_max">300м<sup>2</sup></span>
 								</div>
 								<div class="square_input">
 									<input class="input small" placeholder="0" data-square="м2" type="tel" name="square">
-									<span class="caption">м2</span>
+									<span class="caption">м<sup>2</sup></span>
 								</div>
 							</div>
 					</div>
@@ -147,8 +157,8 @@
 				</form>
 
 				<div class="actions">
-					<button>У меня свой дизайн-проект</button>
-					<button>Нужна помощь специалиста</button>
+					<button>Маю свій дизайн проект</button>
+					<button>Потрібна допомога спеціаліста</button>
 				</div>
 			</div>
 	</div>
@@ -157,15 +167,13 @@
 	<div class="container">
 			<div class="section_content">
 				<div class="text">
-					<h1 class="section_title">
-						МЫ — КОМПАНИЯ <br> «СтройТат»
-					</h1>
+					<h1 class="section_title">Ми — компанія <br> «LVhome»</h1>
 					<div class="section_description">
-						Доброго вам времени суток! Давайте знакомиться!
-						Занимаемся ремонтом недвижимости любой сложности «под ключ»
-						Наша деятельность успешно распространяется в г. Набережные Челны.
-						Мы всегда готовы предложить услуги по ремонту и отделке комфортного и уютного гнёздышка по готовому или индивидуальному проекту. Мы ориентируемся на качество и сроки ремонта, чтобы все наши клиенты остались довольны сотрудничеством и могли в полной мере насладиться комфортом в домах.
-						Мы ремонтируем недвижимость применяя современные техники и технологии
+						Доброго вам часу доби! Давайте знайомитися! 
+						Займаємося ремонтом нерухомості будь-якої складності «під ключ» 
+						Наша діяльність успішно поширюється в м. Київ та області.
+						Ми завжди готові запропонувати послуги з ремонту та обробки комфортного і затишного гніздечка за готовим або індивідуальним проектом.  Ми орієнтуємось на якість та строки ремонту, щоб всі наші клієнти залишилися задоволені співпрацею та могли в повній мірі насолодитися комфортом у будинках.
+						Ми ремонтуємо нерухомість застосовуючи сучасні техніки та технології 
 					</div>
 					<div class="advantages">
 						<div class="item">
@@ -218,12 +226,12 @@
         <section class="variants section space-top" id="variants">
 	<div class="container">
 			<div class="section_content">
-				<h1 class="section_title dark">Варианты ремонта на ваш выбор</h1>
+				<h1 class="section_title dark">Варіанти робіт на ваш вибір</h1>
 				<div class="repair_list swiper slider no_container" id="repair-list">
 					<div class="swiper-wrapper">
 						<div class="repair_card swiper-slide">
 							<div class="title">ГАРНИЙ КОСМЕТИЧНИЙ РЕМОНТ</div>
-							<div class="price">від 1000 грн/м2</div>
+							<div class="price">від 1000 грн/м<sup>2</sup></div>
 							<div class="divider"></div>
 							<div class="description">
 								<div class="description_title">Підійде:</div>
@@ -235,7 +243,7 @@
 						</div>
 						<div class="repair_card swiper-slide">
 							<div class="title">ГЛОБАЛЬНИЙ/КАПІТАЛЬНИЙ РЕМОНТ</div>
-							<div class="price">від 1800 грн/м2</div>
+							<div class="price">від 1800 грн/м<sup>2</sup></div>
 							<div class="divider"></div>
 							<div class="description">
 								<div class="description_title">Підійде:</div>
@@ -247,7 +255,7 @@
 						</div>
 						<div class="repair_card swiper-slide">
 							<div class="title">СТИЛЬНИЙ ДИЗАЙНЕРСЬКИЙ РЕМОНТ</div>
-							<div class="price">від 2000 грн/м2</div>
+							<div class="price">від 2000 грн/м<sup>2</sup></div>
 							<div class="divider"></div>
 							<div class="description">
 								<div class="description_title">Підійде:</div>
@@ -265,7 +273,7 @@
         <section class="portfolio section space-top" id="portfolio">
 	<div class="container">
 			<div class="section_content">
-				<h1 class="section_title dark">Наши работы</h1>
+				<h1 class="section_title dark">Наші роботи</h1>
 				<div class="portfolio_gallery swiper slider no_container" id="portfolio-gallery">
 					<div class="swiper-wrapper">
 						<div class="gallery_item swiper-slide">
@@ -275,14 +283,14 @@
 								</div>
 							</div>
 							<div class="info" data-swiper-parallax="-500">
-								<div class="title">Ремонт 3-х комнатной квартиры</div>
+								<div class="title">Ремонт 3-х кімнатної квартири</div>
 								<div class="description">
-									<p><span>Адрес объекта: </span>МЖК Sunrice City</p>
-									<p><span>Площадь: </span>110 м2</p>
-									<p><span>Срок выполнения: </span>25 дней</p>
-									<p><span>Стоимость ремонта: </span>250 000 рублей</p>
+									<p><span>Адреса: </span>МЖК Sunrice City</p>
+									<p><span>Площа: </span>110м<sup>2</sup></p>
+									<p><span>Строк виконання: </span>25 днів</p>
+									<p><span>Вартість ремонту: </span>100 000 гривень</p>
 								</div>
-								<button class="button">Подробнее</button>
+								<button class="button">Детальніше</button>
 							</div>
 						</div>
 						<div class="gallery_item swiper-slide">
@@ -292,14 +300,14 @@
 								</div>
 							</div>
 							<div class="info" data-swiper-parallax="-500">
-								<div class="title">Ремонт 3-х комнатной квартиры</div>
+								<div class="title">Ремонт 3-х кімнатної квартири</div>
 								<div class="description">
-									<p><span>Адрес объекта: </span>МЖК Sunrice City</p>
-									<p><span>Площадь: </span>110 м2</p>
-									<p><span>Срок выполнения: </span>25 дней</p>
-									<p><span>Стоимость ремонта: </span>250 000 рублей</p>
+									<p><span>Адреса: </span>МЖК Sunrice City</p>
+									<p><span>Площа: </span>110м<sup>2</sup></p>
+									<p><span>Строк виконання: </span>25 днів</p>
+									<p><span>Вартість ремонту: </span>100 000 гривень</p>
 								</div>
-								<button class="button">Подробнее</button>
+								<button class="button">Детальніше</button>
 							</div>
 						</div>
 						<div class="gallery_item swiper-slide">
@@ -309,14 +317,14 @@
 								</div>
 							</div>
 							<div class="info" data-swiper-parallax="-500">
-								<div class="title">Ремонт 3-х комнатной квартиры</div>
+								<div class="title">Ремонт 3-х кімнатної квартири</div>
 								<div class="description">
-									<p><span>Адрес объекта: </span>МЖК Sunrice City</p>
-									<p><span>Площадь: </span>110 м2</p>
-									<p><span>Срок выполнения: </span>25 дней</p>
-									<p><span>Стоимость ремонта: </span>250 000 рублей</p>
+									<p><span>Адреса: </span>МЖК Sunrice City</p>
+									<p><span>Площа: </span>110м<sup>2</sup></p>
+									<p><span>Строк виконання: </span>25 днів</p>
+									<p><span>Вартість ремонту: </span>100 000 гривень</p>
 								</div>
-								<button class="button">Подробнее</button>
+								<button class="button">Детальніше</button>
 							</div>
 						</div>
 					</div>
@@ -331,7 +339,7 @@
 	<div class="container">
 			<div class="section_content">
 				<h1 class="section_title upper">
-					Схема работы
+					Схема роботи
 				</h1>
 				<div class="scheme_list">
 					<div class="item">
@@ -341,8 +349,8 @@
 							<div class="arrow vertical mobile"></div>
 						</div>
 						<div class="text">
-							<div class="title">Вы оставляете заявку</div>
-							<div class="description">Можете оставить заявку на сайте, позвонить или написать на нашу почту</div>
+							<div class="title">Ви залишаєте заявку</div>
+							<div class="description">Можете залишити заявку на сайті, зателефонувати чи написати на нашу пошту</div>
 						</div>
 					</div>
 					<div class="item">
@@ -352,8 +360,8 @@
 							<div class="arrow vertical mobile"></div>
 						</div>
 						<div class="text">
-							<div class="title">Организация встречи</div>
-							<div class="description">Сделаем все замеры, обсудим Ваши пожелания, порекомендуем подходящие материалы</div>
+							<div class="title">Організація зустрічі</div>
+							<div class="description">Зробимо всі заміри, обговоримо ваші побажання, порекомендуємо матеріали, які найбільше підходять</div>
 						</div>
 					</div>
 					<div class="item">
@@ -363,8 +371,8 @@
 							<div class="arrow vertical mobile"></div>
 						</div>
 						<div class="text">
-							<div class="title">Мы подписываем договор</div>
-							<div class="description">Предоставляем Вам готовую смету, подписываем договор и мы приступаем к работе</div>
+							<div class="title">Підписання договору</div>
+							<div class="description">Представляємо Вам готовий кошторис, підписуємо договір і ми приступаємо до роботи</div>
 						</div>
 					</div>
 					<div class="item">
@@ -374,8 +382,8 @@
 							<div class="arrow vertical mobile"></div>
 						</div>
 						<div class="text">
-							<div class="title">Мы приступаем к работе</div>
-							<div class="description">В течении 7 рабочих дней приступаем к ремонту, отправляем фото и видео отчеты</div>
+							<div class="title">Приступаємо до роботи</div>
+							<div class="description">Протягом 7 робочих днів приступаємо до роботи, відправляем фото і відеозвіти</div>
 						</div>
 					</div>
 				</div>
@@ -404,18 +412,14 @@
 			<div class="divider_vertical desktop"></div>
 			<div class="divider mobile"></div>
 			<div class="content">
-				<h1 class="section_title">
-					Сделай ремонт дома  вместе со СтройТат
-				</h1>
-				<div class="section_description">
-					Созвонимся, встретимся и начнём...
-				</div>
+				<h1 class="section_title">Зробіть ремонт домівки разом з «LVhome»</h1>
+				<div class="section_description">Зв'яжемось, зустрінемось і почнемо...</div>
 				<form class="form_callback">
 					<div class="question_block">
 						<div class="question_title">Ваш номер телефону</div>
 						<input class="input dark" type="tel" placeholder="(+380)-XX-XXX-XXXX" name="phone" data-mask="phone">
 					</div>
-					<button type="submit" class="button big">Оставить заявку</button>
+					<button type="submit" class="button big">Залишити заявку</button>
 				</form>
 			</div>
 		</div>
@@ -424,22 +428,22 @@
         <section class="reviews section space-top" id="reviews">
 	<div class="container">
 			<div class="section_content">
-				<h1 class="section_title upper dark">Отзывы</h1>
+				<h1 class="section_title upper dark">Відгуки</h1>
 				<div class="reviews_list swiper slider no_container" id="reviews-list">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="item">
 								<div class="info">
-									<div class="title">Ремонт 1-х комнатной квартиры</div>
+									<div class="title">Ремонт 1-кімнатної квартири</div>
 									<div class="divider"></div>
 									<div class="object">
 										<div class="text-group column">
-											<div class="text">Заказчик:</div>
-											<div class="small_text">Иванов Иван Иванович</div>
+											<div class="text">Замовник:</div>
+											<div class="small_text">Захар</div>
 										</div>
 										<div class="text-group column">
-											<div class="text">Адрес:</div>
-											<div class="small_text">МЖК Sunrice City</div>
+											<div class="text">Адреса:</div>
+											<div class="small_text">ЖК Sunrice City</div>
 										</div>
 									</div>
 									<div class="divider"></div>
@@ -449,7 +453,7 @@
 											<div class="small_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</div>
 										</div>
 										<div class="text-group">
-											<div class="text">Отзыв:</div>
+											<div class="text">Відгук:</div>
 											<div class="small_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</div>
 										</div>
 									</div>
@@ -466,12 +470,12 @@
 									<div class="divider"></div>
 									<div class="object">
 										<div class="text-group column">
-											<div class="text">Заказчик:</div>
-											<div class="small_text">Иванов Иван Иванович</div>
+											<div class="text">Замовник:</div>
+											<div class="small_text">Захар</div>
 										</div>
 										<div class="text-group column">
-											<div class="text">Адрес:</div>
-											<div class="small_text">МЖК Sunrice City</div>
+											<div class="text">Адреса:</div>
+											<div class="small_text">ЖК Sunrice City</div>
 										</div>
 									</div>
 									<div class="divider"></div>
@@ -481,7 +485,7 @@
 											<div class="small_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</div>
 										</div>
 										<div class="text-group">
-											<div class="text">Отзыв:</div>
+											<div class="text">Відгук:</div>
 											<div class="small_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</div>
 										</div>
 									</div>
@@ -498,12 +502,12 @@
 									<div class="divider"></div>
 									<div class="object">
 										<div class="text-group column">
-											<div class="text">Заказчик:</div>
-											<div class="small_text">Иванов Иван Иванович</div>
+											<div class="text">Замовник:</div>
+											<div class="small_text">Захар</div>
 										</div>
 										<div class="text-group column">
-											<div class="text">Адрес:</div>
-											<div class="small_text">МЖК Sunrice City</div>
+											<div class="text">Адреса:</div>
+											<div class="small_text">ЖК Sunrice City</div>
 										</div>
 									</div>
 									<div class="divider"></div>
@@ -513,7 +517,7 @@
 											<div class="small_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</div>
 										</div>
 										<div class="text-group">
-											<div class="text">Отзыв:</div>
+											<div class="text">Відгук:</div>
 											<div class="small_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate pulvinar lectus turpis mattis orci. Nisi id tincidunt lacus, sit mi nunc integer ornare. Nunc dignissim nunc iaculis lacus viverra pulvinar ullamcorper ornare. Senectus viverra duis eget cursus interdum nunc id tristique maecenas.</div>
 										</div>
 									</div>
@@ -534,49 +538,49 @@
         <section class="offers section space-top" id="offers">
 	<div class="container">
 			<div class="section_content">
-				<h1 class="section_title upper dark">Услуги ремонта</h1>
+				<h1 class="section_title upper dark">Послуги ремонту</h1>
 				<div class="offers_gallery">
 					<div class="offer_card">
-						<div class="title">Демонтажные работы в Набережных Челнах</div>
-						<div class="price">от 100 ₽/м2</div>
-						<div class="desc">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</div>
-						<div class="button">Подробнее</div>
+						<div class="title">Малярні роботи</div>
+						<div class="price">від 1000 грн/м<sup>2</sup></div>
+						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
+						<div class="button">Детальніше</div>
 					</div>
 					<div class="offer_card">
-						<div class="title">Демонтажные работы в Набережных Челнах</div>
-						<div class="price">от 100 ₽/м2</div>
-						<div class="desc">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</div>
-						<div class="button">Подробнее</div>
+						<div class="title">Демонтажні роботи</div>
+						<div class="price">від 1000 грн/м<sup>2</sup></div>
+						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
+						<div class="button">Детальніше</div>
 					</div>
 					<div class="offer_card">
-						<div class="title">Демонтажные работы в Набережных Челнах</div>
-						<div class="price">от 100 ₽/м2</div>
-						<div class="desc">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</div>
-						<div class="button">Подробнее</div>
+						<div class="title">Штукатурні роботи</div>
+						<div class="price">від 1000 грн/м<sup>2</sup></div>
+						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
+						<div class="button">Детальніше</div>
 					</div>
 					<div class="offer_card">
-						<div class="title">Демонтажные работы в Набережных Челнах</div>
-						<div class="price">от 100 ₽/м2</div>
-						<div class="desc">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</div>
-						<div class="button">Подробнее</div>
+						<div class="title">Сантехнічні роботи</div>
+						<div class="price">від 1000 грн/м<sup>2</sup></div>
+						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
+						<div class="button">Детальніше</div>
 					</div>
 					<div class="offer_card">
-						<div class="title">Демонтажные работы в Набережных Челнах</div>
-						<div class="price">от 100 ₽/м2</div>
-						<div class="desc">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</div>
-						<div class="button">Подробнее</div>
+						<div class="title">Роботи з плиткою</div>
+						<div class="price">від 1000 грн/м<sup>2</sup></div>
+						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
+						<div class="button">Детальніше</div>
 					</div>
 					<div class="offer_card">
-						<div class="title">Демонтажные работы в Набережных Челнах</div>
-						<div class="price">от 100 ₽/м2</div>
-						<div class="desc">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</div>
-						<div class="button">Подробнее</div>
+						<div class="title">Електричні роботи</div>
+						<div class="price">від 1000 грн/м<sup>2</sup></div>
+						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
+						<div class="button">Детальніше</div>
 					</div>
 					<div class="offer_card">
-						<div class="title">Демонтажные работы в Набережных Челнах</div>
-						<div class="price">от 100 ₽/м2</div>
-						<div class="desc">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных материалов к нанесению, финишная покраска</div>
-						<div class="button">Подробнее</div>
+						<div class="title">Столярні роботи</div>
+						<div class="price">від 1000 грн/м<sup>2</sup></div>
+						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
+						<div class="button">Детальніше</div>
 					</div>
 				</div>
 			</div>
@@ -585,39 +589,39 @@
         <section class="faq section space-top" id="faq">
 	<div class="container">
 			<div class="section_content">
-				<h1 class="section_title upper dark">Ответы на ваши вопросы</h1>
+				<h1 class="section_title upper dark">Відповіді на Ваші питання</h1>
 				<div class="faq_list">
 					<div class="accordion">
 						<div accordion-item class="accordion_item">
 							<div accordion-toggle class="accordion_toggle">
 									<div class="toggle_num">01</div>
-									<div class="toggle_text">С чего лучше начать ремонт квартиры?</div>
+									<div class="toggle_text">З чого почати ремонт квартири?</div>
 									<div class="toggle_icon"></div>
 							</div>
 							<div class="accordion_content">
-									<div class="text">Ремонт квартиры чаще всего начинается с подготовительных или демонтажных работ. Вы всегда можете оставить заявку на сайте и мы подробно расскажем вам, с чего лучше начинать ремонт квартиры</div>
+									<div class="text">Ремонт квартири найчастіше починається з підготовчих та демонтажних робіт. Ви завжди можете залишити заявку на сайті і ми детально розкажемо Вам.</div>
 							</div>
 						</div>
 
 						<div accordion-item class="accordion_item">
 							<div accordion-toggle class="accordion_toggle">
 									<div class="toggle_num">02</div>
-									<div class="toggle_text">С чего лучше начать ремонт квартиры?</div>
+									<div class="toggle_text">З чого почати ремонт квартири?</div>
 									<div class="toggle_icon"></div>
 							</div>
 							<div class="accordion_content">
-									<div class="text">Ремонт квартиры чаще всего начинается с подготовительных или демонтажных работ. Вы всегда можете оставить заявку на сайте и мы подробно расскажем вам, с чего лучше начинать ремонт квартиры</div>
+									<div class="text">Ремонт квартири найчастіше починається з підготовчих та демонтажних робіт. Ви завжди можете залишити заявку на сайті і ми детально розкажемо Вам.</div>
 							</div>
 						</div>
 
 						<div accordion-item class="accordion_item">
 							<div accordion-toggle class="accordion_toggle">
 									<div class="toggle_num">03</div>
-									<div class="toggle_text">С чего лучше начать ремонт квартиры?</div>
+									<div class="toggle_text">З чого почати ремонт квартири?</div>
 									<div class="toggle_icon"></div>
 							</div>
 							<div class="accordion_content">
-									<div class="text">Ремонт квартиры чаще всего начинается с подготовительных или демонтажных работ. Вы всегда можете оставить заявку на сайте и мы подробно расскажем вам, с чего лучше начинать ремонт квартиры</div>
+									<div class="text">Ремонт квартири найчастіше починається з підготовчих та демонтажних робіт. Ви завжди можете залишити заявку на сайті і ми детально розкажемо Вам.</div>
 							</div>
 						</div>
 					</div>
@@ -633,25 +637,25 @@
         <div class="footer_content">
             <div class="menu_list actions">
                 <a class="logo" href="/"><img src="img/logo.svg" alt=""></a>
-                <a href="#" class="button small fluid">Калькулятор стоимости</a>
-                <a href="#" class="button small fluid">Бесплатный выезд на объект</a>
+                <a href="#" class="button small fluid">Калькулятор вартості</a>
+                <a href="#" class="button small fluid">Безкоштовний виїзд на об'єкт</a>
             </div>
             <div class="menu_list main">
-                <div class="menu_title">Преимущества</div>
+                <div class="menu_title">Переваги</div>
                 <div class="text">
-                    Один подрядчик на все виды работ
-                    От проекта до сдачи объекта под ключ
-                    Фиксированная цена в договоре
-                    Гарантия на работы
-                    Строители с опытом более 15 лет
+                    <p>Один підрядник на всі види робіт</p>
+                    <p>Від проекту до здачі об'єкту під ключ</p>
+                    <p>Фіксована ціна в договорі</p>
+                    <p>Гарантія на роботи</p>
+                    <p>Будівельники з досвідом більше 15 років</p>
                 </div>
             </div>
             <div class="menu_list">
-                <div class="menu_title">Контакты</div>
-                <a class="link" href="tel:+79999999999">+7 999 999-99-99</a>
-                <a href="tel:+79999999999" class="link">Перезвоните мне</a>
-                <a href="mailto:pochta@stroy-tat.ru" class="link">pochta@stroy-tat.ru</a>
-                <a href="#" class="link">НАписать в телеграм</a>
+                <div class="menu_title">Контакти</div>
+                <a class="link" href="tel:+380504165052">+38(050)416 50 52</a>
+                <a href="#" class="link">Зателефонуйте мені</a>
+                <a href="LVhome@gmail.com" class="link">LVhome@gmail.com</a>
+                <a href="https://t.me/l_a_w_less" class="link">Написати в телеграм</a>
             </div>
         </div>
     </div>

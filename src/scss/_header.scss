@@ -29,16 +29,9 @@ header {
 
 		.menu {
 			display: flex;
-	
-			// .menu__item-link
-			&__item-link {
-				padding: 10px 20px;
-				font-size: 20px;
-
-				&:after,
-				&:before {
-					left: 6px;
-				}
+			
+			.menu__item {
+				width: auto;
 			}
 		}
 

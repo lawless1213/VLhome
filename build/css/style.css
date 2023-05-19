@@ -1586,14 +1586,8 @@ header .navbar .menu {
   display: flex;
 }
 
-header .navbar .menu__item-link {
-  padding: 10px 20px;
-  font-size: 20px;
-}
-
-header .navbar .menu__item-link:after,
-header .navbar .menu__item-link:before {
-  left: 6px;
+header .navbar .menu .menu__item {
+  width: auto;
 }
 
 header .navbar .burger {

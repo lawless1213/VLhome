@@ -4,6 +4,11 @@
 var scroll = new SmoothScroll('a[href*="#"]');
 
 // Инициализация слайдеров
+const swiperMenuHeader = new Swiper('#header-menu', {
+	slidesPerView: "auto",
+	spaceBetween: 10,
+});
+
 const swiperRepair = new Swiper('#repair-list', {
 	slidesPerView: "auto",
 	spaceBetween: 30,
