@@ -23,6 +23,10 @@
 	&.fluid {
 		width: 100%;
 	}
+
+	&.wide {
+		min-width: 260px;
+	}
 }
 
 

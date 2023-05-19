@@ -1037,6 +1037,10 @@ section .section_description:after {
   width: 100%;
 }
 
+.button.wide {
+  min-width: 260px;
+}
+
 .nav-link {
   position: relative;
   display: block;
@@ -1818,6 +1822,10 @@ section.calculator .section_content .form_calculator .question_block .answers_li
   max-width: 450px;
 }
 
+section.calculator .section_content .form_calculator .question_block .answers_list .square_range span {
+  color: #282828;
+}
+
 section.calculator .section_content .form_calculator .question_block .answers_list .square_input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2553,6 +2561,9 @@ section.offers .section_content .offers_gallery .offer_card .desc {
     width: 100%;
     height: 2px;
     background: currentColor;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
 
   header .navbar .burger:before {
@@ -2575,6 +2586,8 @@ section.offers .section_content .offers_gallery .offer_card .desc {
     transition: 0.2s;
   }
 
+  header .navbar .burger:hover:before,
+  header .navbar .burger:hover::after,
   header .navbar .burger:hover * {
     color: #FF4C00;
   }
@@ -2747,6 +2760,11 @@ section.offers .section_content .offers_gallery .offer_card .desc {
 
   section.calculator .section_content .form_calculator {
     padding: 20px;
+  }
+
+  section.calculator .section_content .actions button {
+    line-height: 24px;
+    font-size: 18px;
   }
 
   section.about .section_content .text {

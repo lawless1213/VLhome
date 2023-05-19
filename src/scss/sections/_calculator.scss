@@ -62,6 +62,10 @@ section.calculator {
 						justify-content: space-between;
 						width: 100%;
 						max-width: 450px;
+
+						span {
+							color: $colorTextSecondary;
+						}
 					}
 
 					.square_input {
@@ -126,6 +130,13 @@ section.calculator {
 		@include mediaScreen(0, $tablet-portrait) {
 			.form_calculator {
 				padding: 20px;
+			}
+
+			.actions {
+				button {
+					line-height: 24px;
+					font-size: 18px;
+				}
 			}
 		}
 

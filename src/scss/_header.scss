@@ -67,6 +67,7 @@ header {
 					width: 100%;
 					height: 2px;
 					background: currentColor;
+					transition: $transition;
 				}
 
 				&:before {
@@ -88,6 +89,8 @@ header {
 				}
 
 				&:hover {
+					&:before,
+					&::after,
 					* {
 						color: $burgerActiveColor;
 					}

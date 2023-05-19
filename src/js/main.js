@@ -1,7 +1,7 @@
 // Custom scripts
 
 // Инициализация плавного скрола по якорям
-var scroll = new SmoothScroll('a[href*="#"]', {durationMax: 2000});
+var scroll = new SmoothScroll('a[href*="#"]', {durationMax: 2000, header: '#header'});
 
 // Инициализация слайдеров
 const swiperMenuHeader = new Swiper('#header-menu', {
