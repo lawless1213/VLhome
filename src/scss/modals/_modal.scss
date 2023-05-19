@@ -1,33 +1,91 @@
 // ************************ Модальное окно ************************ //
 // mf
-.modal__wrapper {
+.modal_overlay {
     position: fixed;
-    left: 0;
     top: 0;
-    bottom: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    left: 0;
     display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, 0.8);
     z-index: 11;
-    display: none;
 
     .modal {
+        width: 100%;
+        max-width: 750px;
+        margin: 20px;
+        padding: 30px 30px;
         background: $colorPanel;
-        padding: 25px;
-        border-radius: 5px;
-        height: 350px;
-        width: 300px;
 
-        &__title {
-            text-align: center;
+        &_title {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 10px;
+
+            span {
+                line-height: 30px;
+                font-size: 26px;
+            }
         }
 
-        &__close {
+        &_close {
+            position: relative;
+            display: block;
+            width: 30px;
+            height: 20px;
+            color: $burgerColor;
+            z-index: 102;
             cursor: pointer;
-            display: flex;
-            justify-content: flex-end;
+    
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: currentColor;
+                transition: $transition;
+            }
+    
+            &:before {
+                top: 8px;
+                transform: rotate(45deg);
+            }
+    
+            &::after {
+                bottom: 10px;
+                transform: rotate(-45deg);
+            }
+    
+            span {
+                position: absolute;
+                top: 9px;
+                right: 0;
+                width: 100%;
+                height: 2px;
+                background: currentColor;
+                transform: scale(0);
+            }
+    
+            &:hover {
+                color: $burgerActiveColor;
+            }
+        }
+
+        &_desc {
+            margin-top: 20px;
+        }
+
+        &_form {
+            margin-top: 20px;
+        }
+
+        .button {
+            justify-self: end;
         }
     }
 }

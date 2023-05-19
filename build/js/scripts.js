@@ -3512,32 +3512,37 @@ function range() {
 range();
 
 // Modals
-function bindModal(trigger, modal, close) {
-  	let triggers = document.querySelectorAll(trigger);
-    let modal = document.querySelector(modal);
-    let close = document.querySelector(close);
-
+function bindModal(triggerSelector) {
+	let triggers = document.querySelectorAll(triggerSelector);
+	let closes = document.querySelectorAll('.modal_close');
   const body = document.body;
 
-  triggers.forEach(trigger => {
+	triggers.forEach(trigger => {
+		let modal = document.querySelector(trigger.dataset.targetModal);
+
 		trigger.addEventListener('click', e => {
 			e.preventDefault()
 			modal.style.display = 'flex'
 			body.classList.add('locked')
 		});
+
+		modal.addEventListener('click', e => {
+			if (e.target === modal) {
+				modal.style.display = 'none'
+				body.classList.remove('locked')
+			}
+		})
 	})
-  close.addEventListener('click', () => {
-    modal.style.display = 'none'
-     body.classList.remove('locked')
-  });
-  modal.addEventListener('click', e => {
-    if (e.target === modal) {
-      modal.style.display = 'none'
-       body.classList.remove('locked')
-    }
-  })
+
+	closes.forEach(close => {
+		close.addEventListener('click', () => {
+			let modal = close.closest('.modal_overlay');
+			modal.style.display = 'none'
+			body.classList.remove('locked')
+		});
+	})
 }
 
-bindModal('[data-modal="callback"]', '.modal__wrapper', '.modal__close')
+bindModal('[data-target-modal]')
 
 

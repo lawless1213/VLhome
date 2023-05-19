@@ -1,6 +1,24 @@
 form {
-	input.input {
+	&.table {
+		display: grid;
+		gap: 20px;
+
+		.input_group {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+
+			> * {
+				flex: 1 1 200px;
+			}
+		}
+	}
+
+
+	input.input,
+	textarea {
 		padding: 16px 20px;
+		color: $colorTextSecondary;
 		background: none;
 		border: 1px solid $colorPrimary;
 		outline: none;
@@ -14,9 +32,14 @@ form {
 			color: $colorTextPrimary;
 		}
 
-		& + .caption {
-
+		&.fluid {
+			width: 100%;
 		}
+	}
+
+	textarea {
+		height: 150px;
+		resize: none;
 	}
 	
 	input[type='radio'] {
@@ -25,6 +48,7 @@ form {
 		& + label {
 			display: inline-block;
 			padding: 16px 20px;
+			color: $colorTextSecondary;
 			border: 1px solid $colorPrimary;
 			transition: $transition;
 			cursor: pointer;
@@ -36,6 +60,7 @@ form {
 		}
 
 		&:checked + label {
+			color: $colorWhite;
 			background: $colorPrimary;
 		}
 

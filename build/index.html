@@ -69,8 +69,8 @@
 				<h4>З фіксованою датою та вартістю по договору</h4>
 				<h4>у м. Київ та області</h4>
 				<div class="actions">
-					<button class="button">Розрахувати вартість</button>
-					<button class="button" data-modal="callback">Залишити заявку</button>
+					<a href="#calculator" class="button">Розрахувати вартість</a>
+					<button class="button" data-target-modal="#callback-full">Залишити заявку</button>
 				</div>
 			</div>
 	</div>
@@ -91,7 +91,7 @@
 
 				<a class="works" href="#">Перегляньте наші роботи</a>
 				
-				<form class="form_calculator">
+				<form id="form-calculator" class="form_calculator">
 					<div class="form_title">Прорахуйте вартість ремонту вашого житла</div>
 					<div class="question_block">
 						<div class="question_title">Тип об'єкта</div>
@@ -157,8 +157,8 @@
 				</form>
 
 				<div class="actions">
-					<button>Маю свій дизайн проект</button>
-					<button>Потрібна допомога спеціаліста</button>
+					<button data-target-modal="#callback-full">Маю свій дизайн проект</button>
+					<button data-target-modal="#callback-full">Потрібна допомога спеціаліста</button>
 				</div>
 			</div>
 	</div>
@@ -239,7 +239,7 @@
 								<span>Для сдачі в оренду</span>
 								<span>Для передпродажної підготовки</span>
 							</div>
-							<button class="button">Замовити</button>
+							<button class="button" data-target-modal="#callback-full">Замовити</button>
 						</div>
 						<div class="repair_card swiper-slide">
 							<div class="title">ГЛОБАЛЬНИЙ/КАПІТАЛЬНИЙ РЕМОНТ</div>
@@ -251,7 +251,7 @@
 								<span>Для ремонту котеджу</span>
 								<span>Щоб повністю відремонтувати квартиру</span>
 							</div>
-							<button class="button">Замовити</button>
+							<button class="button" data-target-modal="#callback-full">Замовити</button>
 						</div>
 						<div class="repair_card swiper-slide">
 							<div class="title">СТИЛЬНИЙ ДИЗАЙНЕРСЬКИЙ РЕМОНТ</div>
@@ -263,7 +263,7 @@
 								<span>Для застосування новітніх технологій</span>
 								<span>Для Вашого якісного життя</span>
 							</div>
-							<button class="button">Замовити</button>
+							<button class="button" data-target-modal="#callback-full">Замовити</button>
 						</div>
 					</div>
 				</div>
@@ -290,7 +290,7 @@
 									<p><span>Строк виконання: </span>25 днів</p>
 									<p><span>Вартість ремонту: </span>100 000 гривень</p>
 								</div>
-								<button class="button">Детальніше</button>
+								<button class="button" data-target-modal="#callback-full">Детальніше</button>
 							</div>
 						</div>
 						<div class="gallery_item swiper-slide">
@@ -307,7 +307,7 @@
 									<p><span>Строк виконання: </span>25 днів</p>
 									<p><span>Вартість ремонту: </span>100 000 гривень</p>
 								</div>
-								<button class="button">Детальніше</button>
+								<button class="button" data-target-modal="#callback-full">Детальніше</button>
 							</div>
 						</div>
 						<div class="gallery_item swiper-slide">
@@ -324,7 +324,7 @@
 									<p><span>Строк виконання: </span>25 днів</p>
 									<p><span>Вартість ремонту: </span>100 000 гривень</p>
 								</div>
-								<button class="button">Детальніше</button>
+								<button class="button" data-target-modal="#callback-full">Детальніше</button>
 							</div>
 						</div>
 					</div>
@@ -414,7 +414,7 @@
 			<div class="content">
 				<h1 class="section_title">Зробіть ремонт домівки разом з «LVhome»</h1>
 				<div class="section_description">Зв'яжемось, зустрінемось і почнемо...</div>
-				<form class="form_callback">
+				<form id="make-with" action="" class="form_callback">
 					<div class="question_block">
 						<div class="question_title">Ваш номер телефону</div>
 						<input class="input dark" type="tel" placeholder="(+380)-XX-XXX-XXXX" name="phone" data-mask="phone">
@@ -544,43 +544,43 @@
 						<div class="title">Малярні роботи</div>
 						<div class="price">від 1000 грн/м<sup>2</sup></div>
 						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
-						<div class="button">Детальніше</div>
+						<button class="button" data-target-modal="#callback-full">Детальніше</button>
 					</div>
 					<div class="offer_card">
 						<div class="title">Демонтажні роботи</div>
 						<div class="price">від 1000 грн/м<sup>2</sup></div>
 						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
-						<div class="button">Детальніше</div>
+						<button class="button" data-target-modal="#callback-full">Детальніше</button>
 					</div>
 					<div class="offer_card">
 						<div class="title">Штукатурні роботи</div>
 						<div class="price">від 1000 грн/м<sup>2</sup></div>
 						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
-						<div class="button">Детальніше</div>
+						<button class="button" data-target-modal="#callback-full">Детальніше</button>
 					</div>
 					<div class="offer_card">
 						<div class="title">Сантехнічні роботи</div>
 						<div class="price">від 1000 грн/м<sup>2</sup></div>
 						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
-						<div class="button">Детальніше</div>
+						<button class="button" data-target-modal="#callback-full">Детальніше</button>
 					</div>
 					<div class="offer_card">
 						<div class="title">Роботи з плиткою</div>
 						<div class="price">від 1000 грн/м<sup>2</sup></div>
 						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
-						<div class="button">Детальніше</div>
+						<button class="button" data-target-modal="#callback-full">Детальніше</button>
 					</div>
 					<div class="offer_card">
 						<div class="title">Електричні роботи</div>
 						<div class="price">від 1000 грн/м<sup>2</sup></div>
 						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
-						<div class="button">Детальніше</div>
+						<button class="button" data-target-modal="#callback-full">Детальніше</button>
 					</div>
 					<div class="offer_card">
 						<div class="title">Столярні роботи</div>
 						<div class="price">від 1000 грн/м<sup>2</sup></div>
 						<div class="desc">До них відносяться підготовка поверхонь під покриття, підготовка оздоблювальних матеріалів до нанесення, фінішня покраска</div>
-						<div class="button">Детальніше</div>
+						<button class="button" data-target-modal="#callback-full">Детальніше</button>
 					</div>
 				</div>
 			</div>
@@ -637,8 +637,8 @@
         <div class="footer_content">
             <div class="menu_list actions">
                 <a class="logo" href="/"><img src="img/logo.svg" alt=""></a>
-                <a href="#" class="button small fluid">Калькулятор вартості</a>
-                <a href="#" class="button small fluid">Безкоштовний виїзд на об'єкт</a>
+                <a href="#calculator" class="button small fluid">Калькулятор вартості</a>
+                <button data-target-modal="#callback-full" class="button small fluid">Безкоштовний виїзд на об'єкт</button>
             </div>
             <div class="menu_list main">
                 <div class="menu_title">Переваги</div>
@@ -653,7 +653,7 @@
             <div class="menu_list">
                 <div class="menu_title">Контакти</div>
                 <a class="link" href="tel:+380504165052">+38(050)416 50 52</a>
-                <a href="#" class="link">Зателефонуйте мені</a>
+                <a data-target-modal="#callback" class="link">Зателефонуйте мені</a>
                 <a href="LVhome@gmail.com" class="link">LVhome@gmail.com</a>
                 <a href="https://t.me/l_a_w_less" class="link">Написати в телеграм</a>
             </div>
@@ -662,11 +662,39 @@
 </footer>
 
     <!-- Modals -->
-    <div class="modal__wrapper">
+    <div class="modal_overlay" id="callback">
 	<div class="modal">
-			<div class="modal__close"> <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px"></div>
-			<div class="modal__title"><span>Заголовок</span> </div>
-			<div class="modal__body">
+			<div class="modal_title">
+				<span>Заповніть форму</span>
+				<div class="modal_close"></div>
+			</div>
+			<div class="modal_body">
+				<div class="modal_desc">Після цього ми Вам зателефонуємо і обговоримо деталі</div>
+				<form id="callback-form" action="" class="form modal_form table">
+					<div class="input_group">
+						<input class="input dark fluid" type="tel" placeholder="Ваш телефон" name="phone" data-mask="phone">
+						<button type="submit" class="button">Залишити заявку</button>
+					</div>
+				</form>
+			</div>
+	</div>
+</div>
+    <div class="modal_overlay" id="callback-full">
+	<div class="modal">
+			<div class="modal_title">
+				<span>Заповніть форму</span>
+				<div class="modal_close"></div>
+			</div>
+			<div class="modal_body">
+				<div class="modal_desc">Після цього ми Вам зателефонуємо і обговоримо деталі</div>
+				<form id="callback-form-full" action="" class="form modal_form table">
+					<div class="input_group">
+						<input class="input dark fluid" type="text" placeholder="Ім'я" name="name">
+						<input class="input dark fluid" type="tel" placeholder="Ваш телефон" name="phone" data-mask="phone">
+					</div>
+					<textarea class="dark fluid" placeholder="Коментар до заявки" name="comment"></textarea>
+					<button type="submit" class="button">Залишити заявку</button>
+				</form>
 			</div>
 	</div>
 </div>

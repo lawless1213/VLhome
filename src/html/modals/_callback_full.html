@@ -1,4 +1,4 @@
-<div class="modal_overlay" id="callback">
+<div class="modal_overlay" id="callback-full">
 	<div class="modal">
 			<div class="modal_title">
 				<span>Заповніть форму</span>
@@ -6,11 +6,13 @@
 			</div>
 			<div class="modal_body">
 				<div class="modal_desc">Після цього ми Вам зателефонуємо і обговоримо деталі</div>
-				<form id="callback-form" action="" class="form modal_form table">
+				<form id="callback-form-full" action="" class="form modal_form table">
 					<div class="input_group">
+						<input class="input dark fluid" type="text" placeholder="Ім'я" name="name">
 						<input class="input dark fluid" type="tel" placeholder="Ваш телефон" name="phone" data-mask="phone">
-						<button type="submit" class="button">Залишити заявку</button>
 					</div>
+					<textarea class="dark fluid" placeholder="Коментар до заявки" name="comment"></textarea>
+					<button type="submit" class="button">Залишити заявку</button>
 				</form>
 			</div>
 	</div>

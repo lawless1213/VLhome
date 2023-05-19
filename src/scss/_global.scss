@@ -27,8 +27,12 @@ body {
 // Body
 body {
     @include scrollbar(6px, 6px, $colorPanel, $colorPanel, $colorPrimary, 2px, 2px, 2px);
-    font-family: 'Montserrat', sans-serif;
-    color: $colorTextPrimary;
+    
+    &,
+    * {
+        font-family: 'Montserrat', sans-serif;
+        color: $colorTextPrimary;
+    }
 }
 
 //Section 

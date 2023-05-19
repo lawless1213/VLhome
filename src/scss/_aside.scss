@@ -6,10 +6,12 @@ $transitionAside: 0.5s;
 	top: 0;
 	right: 0;
 	left: 0;
+	visibility: hidden;
 	background: $colorPanel;
 	border-radius: 0 0 22px 22px;
 	transition: transform $transitionAside, opacity $transition;
 	transform: translateY(-100%);
+	opacity: 0;
 	z-index: $asideZIndex;
 
 	.burger {
@@ -98,6 +100,9 @@ $transitionAside: 0.5s;
 	}
 
 	@include mediaScreen(0, $tablet-landscape) {
+		visibility: visible;
+		opacity: 1;
+
 		&.open {
 			transform: translateX(0);
 		}
