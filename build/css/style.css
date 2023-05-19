@@ -2615,7 +2615,7 @@ section.offers .section_content .offers_gallery .offer_card .desc {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 16px;
-    min-height: 150px;
+    min-height: 100px;
   }
 
   section.scheme .section_content .scheme_list .item .step {

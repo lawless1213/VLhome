@@ -3422,7 +3422,7 @@ const swiperPortfolio = new Swiper('#portfolio-gallery', {
 	spaceBetween: 30,
 	parallax: true,
 	autoplay: {
-		delay: 5000,
+		delay: 10000,
 	},
 	loop: true,
 	pagination: {
