@@ -4,5 +4,7 @@
 @@include('libs/smooth-scroll.min(lib).js')
 @@include('libs/swiper(lib).js')
 @@include('libs/imask.js')
+@@include('libs/gsap-all.js')
 @@include('main.js')
+@@include('animation.js')
 

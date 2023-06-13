@@ -4,24 +4,17 @@
             border-bottom: 1px solid $colorTextSecondary;
         }
 
-        &.active {
-            .accordion_toggle {
-                .toggle_icon {
-                    transform: rotateX(0);
-                }
-            }
-
-            .accordion_content {
-                display: block;
-            }
-        }
-
-
         .accordion_toggle {
             display: flex;
             align-items: center;
             padding: 20px 0;
             cursor: pointer;
+
+            &.active {
+                .toggle_icon {
+                    transform: rotateX(0);
+                }
+            }
 
             .toggle_num {
                 margin-right: 10px;
@@ -54,14 +47,14 @@
         }
 
         .accordion_content {
-            display: none;
-            padding-bottom: 20px;
-            animation: fade .3s ease;
+            overflow: hidden;
+            height: 0;
 
             .text {
                 margin-top: 26px;
                 line-height: 20px;
-                font-size: 16;
+                font-size: 16px;
+                padding-bottom: 20px;
                 color: $colorTextSecondary;
 
                 &:first-child {

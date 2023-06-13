@@ -62,19 +62,72 @@ const swiperReviews = new Swiper('#reviews-list', {
 
 // Аккордеон
 function accordion() {
-	const items = [...document.querySelectorAll('[accordion-toggle]')];
+	// const items = [...document.querySelectorAll('[accordion-toggle]')];
 
-	items.forEach(item => {
-		item.addEventListener('click', () => {
-			const parent = item.closest('[accordion-item]');
-			if (parent.classList.contains('active')) {
-				parent.classList.remove('active');
+	// items.forEach(item => {
+	// 	let tl = gsap.timeline();
+	// 	item.addEventListener('click', () => {
+	// 		const content = item.closest('[accordion-item]').querySelector('.accordion_content');
+			
+
+	// 		if (!content.classList.contains('active')) {
+	// 			item.classList.add('active');
+	// 			content.classList.add('active');
+	// 			tl.to(content, {
+	// 				duration: 0.3,
+	// 				height: content.scrollHeight,
+	// 				ease: "power1.inOut",
+	// 			});
+
+	// 			console.log(tl);
+	// 			tl.play();
+	// 		} else {
+	// 			// items.forEach(child => child.closest('[accordion-item]').classList.remove('active'));   
+	// 			content.classList.remove('active');
+	// 			item.classList.remove('active');
+	// 			tl.reverse();
+	// 		}
+	// 	})
+	// })
+
+	let groups = gsap.utils.toArray(".accordion-group");
+	let menus = gsap.utils.toArray(".accordion-menu");
+	let menuToggles = groups.map(createAnimation);
+
+	menus.forEach((menu) => {
+		menu.addEventListener("click", () => toggleMenu(menu));
+	});
+
+	function toggleMenu(clickedMenu) {
+		menuToggles.forEach((toggleFn) => toggleFn(clickedMenu));
+	}
+
+	function createAnimation(element) {
+		let menu = element.querySelector(".accordion-menu");
+		let box = element.querySelector(".accordion-content");
+		const icon = element.querySelector(".toggle_icon");
+
+		gsap.set(box, { height: "auto" });
+
+		let animation = gsap
+			.timeline()
+			.from(box, {
+				height: 0,
+				duration: 0.4,
+				ease: "power1.inOut"
+			})
+			.from(icon, { rotationX: 0, ease: "power1.inOut" }, 0)
+			.to(icon, { rotationX: 180, ease: "none" }, 0)
+			.reverse();
+
+		return function (clickedMenu) {
+			if (clickedMenu === menu) {
+				animation.reversed(!animation.reversed());
 			} else {
-				items.forEach(child => child.closest('[accordion-item]').classList.remove('active'));   
-				parent.classList.add('active');
+				animation.reverse();
 			}
-		})
-	})
+		};
+	}
 }
 
 accordion() 
