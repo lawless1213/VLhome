@@ -62,34 +62,6 @@ const swiperReviews = new Swiper('#reviews-list', {
 
 // Аккордеон
 function accordion() {
-	// const items = [...document.querySelectorAll('[accordion-toggle]')];
-
-	// items.forEach(item => {
-	// 	let tl = gsap.timeline();
-	// 	item.addEventListener('click', () => {
-	// 		const content = item.closest('[accordion-item]').querySelector('.accordion_content');
-			
-
-	// 		if (!content.classList.contains('active')) {
-	// 			item.classList.add('active');
-	// 			content.classList.add('active');
-	// 			tl.to(content, {
-	// 				duration: 0.3,
-	// 				height: content.scrollHeight,
-	// 				ease: "power1.inOut",
-	// 			});
-
-	// 			console.log(tl);
-	// 			tl.play();
-	// 		} else {
-	// 			// items.forEach(child => child.closest('[accordion-item]').classList.remove('active'));   
-	// 			content.classList.remove('active');
-	// 			item.classList.remove('active');
-	// 			tl.reverse();
-	// 		}
-	// 	})
-	// })
-
 	let groups = gsap.utils.toArray(".accordion-group");
 	let menus = gsap.utils.toArray(".accordion-menu");
 	let menuToggles = groups.map(createAnimation);
@@ -116,8 +88,8 @@ function accordion() {
 				duration: 0.4,
 				ease: "power1.inOut"
 			})
-			.from(icon, { rotationX: 0, ease: "power1.inOut" }, 0)
-			.to(icon, { rotationX: 180, ease: "none" }, 0)
+			.from(icon, { rotationX: 180, ease: "power1.inOut" }, 0)
+			.to(icon, { rotationX: 0, ease: "none" }, 0)
 			.reverse();
 
 		return function (clickedMenu) {
