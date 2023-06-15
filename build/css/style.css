@@ -1957,13 +1957,13 @@ section.about .section_content .advantages .item span {
   line-height: 150%;
 }
 
-section.about .section_content .info {
+section.about .section_content .about_grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 250px));
   gap: 20px;
 }
 
-section.about .section_content .info .item {
+section.about .section_content .about_grid .item {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1984,31 +1984,31 @@ section.about .section_content .info .item {
   line-height: 28px;
   font-size: 18px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 4px;
   z-index: 0;
 }
 
-section.about .section_content .info .item:nth-child(1)::before {
+section.about .section_content .about_grid .item:nth-child(1)::before {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-section.about .section_content .info .item:nth-child(2)::before {
+section.about .section_content .about_grid .item:nth-child(2)::before {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-section.about .section_content .info .item:nth-child(3)::before {
+section.about .section_content .about_grid .item:nth-child(3)::before {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
 
-section.about .section_content .info .item:nth-child(4)::before {
+section.about .section_content .about_grid .item:nth-child(4)::before {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-section.about .section_content .info .item::before {
+section.about .section_content .about_grid .item::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -2024,7 +2024,7 @@ section.about .section_content .info .item::before {
   z-index: -2;
 }
 
-section.about .section_content .info .item::after {
+section.about .section_content .about_grid .item::after {
   content: "";
   position: absolute;
   top: 6px;
@@ -2032,11 +2032,11 @@ section.about .section_content .info .item::after {
   width: calc(100% - 12px);
   height: calc(100% - 12px);
   background: #1d2228;
-  border-radius: 5px;
+  border-radius: 2px;
   z-index: -1;
 }
 
-section.about .section_content .info .item .title {
+section.about .section_content .about_grid .item .title {
   line-height: 48px;
   font-size: 38px;
   font-weight: 700;

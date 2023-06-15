@@ -51,7 +51,7 @@ section.about {
 			}
 		}
 		
-		.info {
+		.about_grid {
 			display: grid;
 			grid-template-columns: repeat(2, minmax(0, 250px));
 			gap: 20px;
@@ -68,7 +68,7 @@ section.about {
 				line-height: 28px;
 				font-size: 18px;
 				text-align: center;
-				border-radius: 10px;
+				border-radius: 4px;
 				z-index: 0;
 
 				&:nth-child(1) {
@@ -118,7 +118,7 @@ section.about {
 					width: calc(100% - 12px);
 					height: calc(100% - 12px);
 					background: rgb(29 34 40);
-					border-radius: 5px;
+					border-radius: 2px;
 					z-index: -1;
 				}
 
