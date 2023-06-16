@@ -3583,13 +3583,13 @@ function bindModal(triggerSelector) {
 
 		trigger.addEventListener('click', e => {
 			e.preventDefault()
-			modal.style.display = 'flex'
+			modal.classList.add('open');
 			body.classList.add('locked')
 		});
 
 		modal.addEventListener('click', e => {
 			if (e.target === modal) {
-				modal.style.display = 'none'
+				modal.classList.remove('open');
 				body.classList.remove('locked')
 			}
 		})
@@ -3598,7 +3598,7 @@ function bindModal(triggerSelector) {
 	closes.forEach(close => {
 		close.addEventListener('click', () => {
 			let modal = close.closest('.modal_overlay');
-			modal.style.display = 'none'
+			modal.classList.remove('open');
 			body.classList.remove('locked')
 		});
 	})
