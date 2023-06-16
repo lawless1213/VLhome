@@ -6,6 +6,7 @@
 @@include('libs/imask.js')
 @@include('libs/gsap/gsap.min.js')
 @@include('libs/gsap/ScrollTrigger.min.js')	
+@@include('libs/gsap/CustomEase.min.js')	
 @@include('main.js')
 @@include('animation.js')
 

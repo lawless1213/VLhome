@@ -1,8 +1,19 @@
-$borderStyle: 2px solid $colorTextQuaternary;
-
 .arrow {
+	--arrow-color: #8597AB;
+	// --arrow-end-color: #8597AB;
+	// --width-arrow-line: 0;
+	// --height-arrow-line: 0;
+
 	position: relative;
-	background: $colorTextQuaternary;
+	background: var(--arrow-color);
+
+	// &::before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 0;
+	// 	background: $colorPrimary;
+	// }
 
 	&::after {
 		content: '';
@@ -10,6 +21,7 @@ $borderStyle: 2px solid $colorTextQuaternary;
 		display: block;
 		width: 16px;
 		height: 16px;
+		transition: 0.4s;
 	}
 
 	&.gorizontal {
@@ -18,12 +30,17 @@ $borderStyle: 2px solid $colorTextQuaternary;
 		min-width: 30px;
 		margin: 10px 0;
 
+		// &::before {
+		// 	height: 100%;
+		// 	width: var(--width-arrow-line);
+		// }
+
 		&::after {
 			right: 1px;
 			top: 50%;
 			transform: translateY(-50%) rotate(45deg);
-			border-top: $borderStyle;
-			border-right: $borderStyle;
+			border-top: 2px solid var(--arrow-color);
+			border-right: 2px solid var(--arrow-color);
 		}
 	}
 
@@ -33,12 +50,17 @@ $borderStyle: 2px solid $colorTextQuaternary;
 		min-height: 30px;
 		margin: 0 10px;
 
+		// &::before {
+		// 	width: 100%;
+		// 	height: var(--height-arrow-line);
+		// }
+
 		&::after {
 			left: 50%;
 			bottom: 1px;
 			transform: translateX(-50%) rotate(45deg);
-			border-right: $borderStyle;
-			border-bottom: $borderStyle;
+			border-right: 2px solid var(--arrow-color);
+			border-bottom: 2px solid var(--arrow-color);
 		}
 	}
 }
